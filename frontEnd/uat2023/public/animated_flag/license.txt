@@ -1,0 +1,11 @@
+Model Information:
+* title:	Animated Flag
+* source:	https://sketchfab.com/3d-models/animated-flag-ee4ef66dbeb54b379dca355a20073ea0
+* author:	Space Explorers Academy (https://sketchfab.com/SpaceExplorersAcademy)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Animated Flag" (https://sketchfab.com/3d-models/animated-flag-ee4ef66dbeb54b379dca355a20073ea0) by Space Explorers Academy (https://sketchfab.com/SpaceExplorersAcademy) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
