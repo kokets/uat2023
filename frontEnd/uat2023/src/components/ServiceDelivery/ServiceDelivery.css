@@ -1,0 +1,75 @@
+/* .service-delivery-section{
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+  
+    align-items: center;
+    justify-content: center;
+}
+.service-delivery-section .services{
+    flex-direction: column;
+
+} */
+.service-delivery-section {
+    text-align: center;
+    /* padding: 40px 20px; */
+    /* background-color:var(--dark-blue); */
+    flex: 1 1 auto;
+
+  }
+  
+  .service-delivery-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .services {
+    display: flex; /* Align child elements in a row */
+  overflow-x: auto; /* Enable horizontal scrolling */
+
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10%;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+
+  }
+  
+  .service-item {
+    background: rgba(0, 0, 139, 0.1);/* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    transition: transform 0.2s;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 596px; /* Ensure each item has a minimum width */
+
+  }
+  
+ 
+  
+  .service-item h2 {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .service-item p {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .service-item .fa-icon {
+    color: #007bff; /* Customize the icon color */
+    margin-bottom: 10px;
+  }
+  
+
+  .date {
+    font-style: italic; /* Optional: style for the date */
+    color: rgba(255, 255, 255, 0.8); /* Optional: color for the date */
+  }

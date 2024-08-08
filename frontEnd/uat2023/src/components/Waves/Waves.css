@@ -1,65 +1,94 @@
-
 .waves {
-    position:relative;
-    width: 100%;
-    height:15vh;
-    margin-bottom:-7px; 
-    min-height:100px;
-    max-height:150px;
-  
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+  order: 1;
 
+}
+
+
+.waveSection {
+  margin-top: -130px;
+  /* Adjust this value as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.party-Slogan {
+  position: relative;
+
+  color: red;
+  margin-top: -110px;
+  order: 2;
+  /* background-color: red; */
+}
+
+.slogan {
+  font-size: 100px;
+  color: transparent;
+  /* Make the text itself transparent */
+  -webkit-text-stroke: 2px rgb(241, 233, 233);
+  /* Add stroke to the text */
+  background: transparent;
+  /* Ensure background is transparent */
+  font-weight: var(--font-weight-bold);
+}
+
+
+/* Animation */
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
   }
 
-  .content {
-    position:relative;
-    height:50vh;
-    text-align:center;
-    /* background-color: rgb(182, 23, 23); */
+  100% {
+    transform: translate3d(85px, 0, 0);
   }
-  .waveSection{
-    margin-top: -130px; /* Adjust this value as needed */
+}
 
-  }
-  /* Animation */
-  
-  .parallax > use {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-  }
-  .parallax > use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 7s;
-  }
-  .parallax > use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 10s;
-  }
-  .parallax > use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 13s;
-  }
-  .parallax > use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-  }
-  @keyframes move-forever {
-    0% {
-     transform: translate3d(-90px,0,0);
-    }
-    100% { 
-      transform: translate3d(85px,0,0);
-    }
-  }
-  /* Vendor Prefixes for Animation */
+/* Vendor Prefixes for Animation */
 @-webkit-keyframes move-forever {
-    0% {
-      -webkit-transform: translate3d(-90px, 0, 0);
-    }
-    100% { 
-      -webkit-transform: translate3d(85px, 0, 0);
-    }
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
   }
-  /*Shrinking for mobile*/
-  /* @media (max-width: 768px) {
+
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*Shrinking for mobile*/
+/* @media (max-width: 768px) {
     .waves {
       height:40px;
       min-height:40px;
@@ -72,55 +101,95 @@
     }
   } */
 
-  /* Responsive Designs */
+/* Responsive Designs */
 
 /* Mobile Devices (up to 480px) */
 @media (max-width: 480px) {
-    .waves {
-      height: 10vh; /* Adjust height for smaller screens */
-      min-height: 80px; /* Adjust min-height */
-      max-height: 120px; /* Adjust max-height */
-    }
-  
-    .content {
-      height: 40vh; /* Adjust height for smaller screens */
-    }
-  
-    .waveSection {
-      margin-top: -100px; /* Adjust overlap for smaller screens */
-    }
+  .waves {
+    height: 10vh;
+    /* Adjust height for smaller screens */
+    min-height: 80px;
+    /* Adjust min-height */
+    max-height: 120px;
+    /* Adjust max-height */
   }
-  
-  /* Tablets (481px to 768px) */
-  @media (min-width: 481px) and (max-width: 768px) {
-    .waves {
-      height: 12vh; /* Adjust height for medium screens */
-      min-height: 90px; /* Adjust min-height */
-      max-height: 130px; /* Adjust max-height */
-    }
-  
-    .content {
-      height: 45vh; /* Adjust height for medium screens */
-    }
-  
-    .waveSection {
-      margin-top: -115px; /* Adjust overlap for medium screens */
-    }
+
+  .content {
+    height: 40vh;
+    /* Adjust height for smaller screens */
   }
-  
-  /* Large Screens (1025px and above) */
-  @media (min-width: 1025px) {
-    .waves {
-      height: 15vh; /* Original height for large screens */
-      min-height: 100px; /* Original min-height */
-      max-height: 150px; /* Original max-height */
-    }
-  
-    .content {
-      height: 50vh; /* Original height */
-    }
-  
-    .waveSection {
-      margin-top: -130px; /* Original overlap */
-    }
+
+  .waveSection {
+    margin-top: -100px;
+    /* Adjust overlap for smaller screens */
   }
+  .party-Slogan {
+    margin-top: -50px; /* Adjust as needed */
+    font-size: 24px; /* Adjust the font size if applicable */
+  }
+
+  .slogan {
+    font-size: 24px; /* Adjust the font size for small screens */
+    -webkit-text-stroke: 1px rgb(241, 233, 233); /* Reduce stroke width */
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .waves {
+    height: 12vh;
+    /* Adjust height for medium screens */
+    min-height: 90px;
+    /* Adjust min-height */
+    max-height: 130px;
+    /* Adjust max-height */
+  }
+
+  .content {
+    height: 45vh;
+    /* Adjust height for medium screens */
+  }
+
+  .waveSection {
+    margin-top: -115px;
+    /* Adjust overlap for medium screens */
+  }
+  .party-Slogan {
+    margin-top: -100px; /* Adjust as needed */
+  }
+
+  .slogan {
+    font-size: 60px; /* Adjust the font size for small laptops */
+    -webkit-text-stroke: 1.5px rgb(241, 233, 233); /* Adjust stroke width */
+  }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+  .waves {
+    height: 15vh;
+    /* Original height for large screens */
+    min-height: 100px;
+    /* Original min-height */
+    max-height: 150px;
+    /* Original max-height */
+  }
+
+  .content {
+    height: 50vh;
+    /* Original height */
+  }
+
+  .waveSection {
+    margin-top: -130px;
+    /* Original overlap */
+  }
+  .party-Slogan {
+    margin-top: -110px; /* Original margin for large screens */
+  }
+
+  .slogan {
+    font-size: 100px; /* Original font size for large screens */
+    -webkit-text-stroke: 2px rgb(241, 233, 233); /* Original stroke width */
+  }
+}

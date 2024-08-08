@@ -1,5 +1,9 @@
 import Header from './Header/Header';
 import HeroSection from './HeroSection/HeroSection';
 import FlagCanvas from './Flag/Flag';
-import Waves from './Waves/Waves'
-export {Header,HeroSection,FlagCanvas, Waves}
+import Waves from './Waves/Waves';
+import Welcome from './Welcome/Welcome';
+import Campaigns from './Campaigns/Campaigns';
+import Projects from './Projects/Projects';
+import ServiceDelivery from './ServiceDelivery/ServiceDelivery'
+export {Header,HeroSection,FlagCanvas, Waves, Welcome,Campaigns,Projects,ServiceDelivery}

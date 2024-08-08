@@ -78,8 +78,8 @@
   }
   
   .header .navigation ul li a:hover {
-    color: var(--red);
-    box-shadow: 0 0 5px var(--red), 0 0 10px var(--red);
+    color: var(--white);
+    background-color: var(--dark-blue);
   }
   
   .header .navigation ul li ul {

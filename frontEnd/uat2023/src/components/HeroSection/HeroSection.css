@@ -64,7 +64,7 @@
 /* Welcome Message */
 .welcome-Message {
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
 
   color: white; /* Text color */
   display: flex;
@@ -73,20 +73,15 @@
 
 }
 .welcome-Message h2 {
-  font-size: var(--font-size-heading-1);
-  padding: 5px;
+  font-size: 60px;
+  font-weight: var(--font-weight-bold);
+
+  /* padding: 2px; */
 }
 
-.welcome-Message p {
-  font-size: var(--font-size-body);
-  padding: 5px;
-}
 
-.welcome-Message p .slogan {
-  color: var(--red);
-  font-size: var(--font-size-heading-3);
-  font-style: italic;
-}
+
+
 
 .welcome-Message p .orgName {
   color: var(--red);
@@ -110,5 +105,5 @@
 .welcome-Message button:hover {
   color: var(--white); /* Text color on hover */
   background-color: var(--red); /* Background color on hover */
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); /* Red glow effect */
+  /* box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);  */
 }

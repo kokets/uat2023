@@ -14,7 +14,6 @@ const HeroSection = () => {
         <div className="welcome-Message">
           <h2>SOUTH AFRICA</h2>
       
-       <span>LET'S GET IT RIGHT</span>
 
           <button>Join Change</button>
         </div>

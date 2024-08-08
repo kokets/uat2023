@@ -1,8 +1,8 @@
-import React from 'react';
-import './Waves.css'
+import React from "react";
+import "./Waves.css";
 const Waves = () => {
   return (
-    <div className='waveSection'>
+    <div className="waveSection">
       <svg
         className="waves"
         xmlns="http://www.w3.org/2000/svg"
@@ -18,14 +18,34 @@ const Waves = () => {
           />
         </defs>
         <g className="parallax">
-        <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" /> {/* White */}
-        <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(255,0,0,0.8)" /> {/* Red */}
-
-          <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(128,128,128,0.5)" /> {/* Gray */}
-          <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(0,0,139,0.8)" /> {/* Dark Blue */}
-
+          <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />{" "}
+          {/* White */}
+          <use
+            xlinkHref="#gentle-wave"
+            x="48"
+            y="5"
+            fill="rgba(255,0,0,0.8)"
+          />{" "}
+          {/* Red */}
+          <use
+            xlinkHref="#gentle-wave"
+            x="48"
+            y="3"
+            fill="rgba(128,128,128,0.5)"
+          />{" "}
+          {/* Gray */}
+          <use
+            xlinkHref="#gentle-wave"
+            x="48"
+            y="0"
+            fill="rgba(0,0,139,0.8)"
+          />{" "}
+          {/* Dark Blue */}
         </g>
       </svg>
+      <div className="party-Slogan">
+        <span className="slogan">Let's get it right</span>
+      </div>
     </div>
   );
 };

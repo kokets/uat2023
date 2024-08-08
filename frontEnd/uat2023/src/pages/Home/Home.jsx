@@ -1,5 +1,5 @@
 import React from "react";
-import { Header,HeroSection,Waves } from "../../components";
+import { Header,HeroSection,Waves ,Welcome,Campaigns,Projects,ServiceDelivery} from "../../components";
 
 const menuItems = [
   { name: "Home", link: "#" },
@@ -54,14 +54,15 @@ const Home = () => {
     <main>
       <section>
         <Header items={menuItems} />
-      </section>
-      <section>
+     
         <HeroSection/>
-      </section>
 
 
-      <section>
       <Waves/>
+      <Welcome/>
+      <ServiceDelivery/>
+      {/* <Projects/> */}
+      <Campaigns/>
       </section>
     </main>
   );
