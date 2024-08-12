@@ -16,6 +16,7 @@
     /* padding: 40px 20px; */
     /* background-color:var(--dark-blue); */
     flex: 1 1 auto;
+    padding: 0 10%;
 
   }
   
@@ -31,7 +32,7 @@
 
     justify-content: center;
     gap: 20px;
-    padding: 0 10%;
+    /* padding: 0 10%; */
     box-sizing: border-box; /* Ensure padding is included in the width calculation */
 
   }

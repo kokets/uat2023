@@ -1,4 +1,4 @@
-.card {
+/* .card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
@@ -11,12 +11,75 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* text-align: center; */
+
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: var(--dark-blue); 
+} */
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(228, 3, 3, 0.8);
+  max-width: 300px;
+  width: 280px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-icon {
   font-size: 40px;
   margin-bottom: 16px;
   color: var(--dark-blue); /* Adjust color as needed */
+}
+
+/* Responsive Designs */
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width for small screens */
+    height: auto; /* Let the height adjust based on content */
+    padding: 12px;
+  }
+
+  .card-icon {
+    font-size: 32px; /* Slightly smaller icon size */
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .card {
+    width: 90%; /* Slightly smaller width for tablets */
+    height: auto;
+  }
+
+  .card-icon {
+    font-size: 36px; /* Adjust icon size as needed */
+  }
+}
+
+/* Small Laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    width: 80%; /* Adjust width to fit better on small laptops */
+    height: auto;
+  }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+  .card {
+    width: 280px; /* Keep the original width on larger screens */
+    height: 350px; /* Keep the original height */
+  }
 }

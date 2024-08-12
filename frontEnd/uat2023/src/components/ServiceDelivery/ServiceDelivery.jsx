@@ -83,7 +83,7 @@ const ServiceDelivery = () => {
           <hr className="divider" />
           <p className="date">August 7, 2024</p> {/* Replace with the desired date */}
         </div>
-        <div className="service-item">
+        {/* <div className="service-item">
           <div className="video-or-image">
             <SimpleImageSlider
                 width={596}
@@ -96,9 +96,9 @@ const ServiceDelivery = () => {
           <h2>Iconic Doer Ramapulana Manasoe and UAT for putting smiles on <br></br> our African children in Rahlakgane Primary school in Limpopo.</h2>
           <p>testing</p>
           <hr className="divider" />
-          <p className="date">August 7, 2024</p> {/* Replace with the desired date */}
-        </div>
-        <div className="service-item">
+          <p className="date">August 7, 2024</p> 
+        </div> */}
+        {/* <div className="service-item">
           <div className="video-or-image">
             <SimpleImageSlider
                 width={596}
@@ -111,8 +111,8 @@ const ServiceDelivery = () => {
           <h2>Iconic Doer Ramapulana Manasoe and UAT for putting smiles on <br></br> our African children in Rahlakgane Primary school in Limpopo.</h2>
           <p>testing</p>
           <hr className="divider" />
-          <p className="date">August 7, 2024</p> {/* Replace with the desired date */}
-        </div>
+          <p className="date">August 7, 2024</p> 
+        </div> */}
       </div>
     </div>
   );
