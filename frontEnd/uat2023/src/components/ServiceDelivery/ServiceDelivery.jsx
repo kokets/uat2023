@@ -40,8 +40,8 @@ const ServiceDelivery = () => {
         <div className="service-item">
           <div className="video-or-image">
             <SimpleImageSlider
-              width={596}
-              height={380}
+                width={670}
+                height={380}
               images={images}
               showBullets={true}
               showNavs={true}
@@ -56,8 +56,8 @@ const ServiceDelivery = () => {
         <div className="service-item">
           <div className="video-or-image">
             <SimpleImageSlider
-              width={596}
-              height={380}
+                width={670}
+                height={380}
               images={images1}
               showBullets={true}
               showNavs={true}
@@ -71,7 +71,7 @@ const ServiceDelivery = () => {
         <div className="service-item">
           <div className="video-or-image">
             <SimpleImageSlider
-                width={596}
+                width={670}
                 height={380}
                 images={images2}
               showBullets={true}
@@ -83,10 +83,40 @@ const ServiceDelivery = () => {
           <hr className="divider" />
           <p className="date">August 7, 2024</p> {/* Replace with the desired date */}
         </div>
-        {/* <div className="service-item">
+        <div className="service-item">
           <div className="video-or-image">
             <SimpleImageSlider
-                width={596}
+               width={670}
+               height={380}
+                images={images2}
+              showBullets={true}
+              showNavs={true}
+            />
+          </div>
+          <h2>Iconic Doer Ramapulana Manasoe and UAT for putting smiles on <br></br> our African children in Rahlakgane Primary school in Limpopo.</h2>
+          <p>testing</p>
+          <hr className="divider" />
+          <p className="date">August 7, 2024</p> 
+        </div>
+        <div className="service-item">
+          <div className="video-or-image">
+            <SimpleImageSlider
+              width={670}
+              height={380}
+                images={images2}
+              showBullets={true}
+              showNavs={true}
+            />
+          </div>
+          <h2>Iconic Doer Ramapulana Manasoe and UAT for putting smiles on <br></br> our African children in Rahlakgane Primary school in Limpopo.</h2>
+          <p>testing</p>
+          <hr className="divider" />
+          <p className="date">August 7, 2024</p> 
+        </div>
+        <div className="service-item">
+          <div className="video-or-image">
+            <SimpleImageSlider
+                width={670}
                 height={380}
                 images={images2}
               showBullets={true}
@@ -97,22 +127,7 @@ const ServiceDelivery = () => {
           <p>testing</p>
           <hr className="divider" />
           <p className="date">August 7, 2024</p> 
-        </div> */}
-        {/* <div className="service-item">
-          <div className="video-or-image">
-            <SimpleImageSlider
-                width={596}
-                height={380}
-                images={images2}
-              showBullets={true}
-              showNavs={true}
-            />
-          </div>
-          <h2>Iconic Doer Ramapulana Manasoe and UAT for putting smiles on <br></br> our African children in Rahlakgane Primary school in Limpopo.</h2>
-          <p>testing</p>
-          <hr className="divider" />
-          <p className="date">August 7, 2024</p> 
-        </div> */}
+        </div>
       </div>
     </div>
   );

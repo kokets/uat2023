@@ -17,28 +17,30 @@
     /* background-color:var(--dark-blue); */
     flex: 1 1 auto;
     padding: 0 10%;
-
+flex-wrap: wrap;
   }
   
   .service-delivery-section h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #520909;
   }
   
   .services {
     display: flex; /* Align child elements in a row */
-  overflow-x: auto; /* Enable horizontal scrolling */
+
 
     justify-content: center;
     gap: 20px;
     /* padding: 0 10%; */
-    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    box-sizing: border-box; 
+
+    flex-wrap: wrap; /* Ensure services wrap on smaller screens */
 
   }
   
   .service-item {
-    background: rgba(0, 0, 139, 0.1);/* Semi-transparent white background */
+    background: rgba(0, 0, 139, 0.5);/* Semi-transparent white background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -47,8 +49,9 @@
     backdrop-filter: blur(10px); /* Apply blur effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    min-width: 596px; /* Ensure each item has a minimum width */
-
+    min-width: 280px; /* Reduce minimum width for better responsiveness */
+    max-width: 100%; /* Ensure the item doesn't exceed parent width */
+    flex: 1 1 45%; /* Allow items to take up 45% of the width, adjusting for two in a row */
   }
   
  
@@ -74,3 +77,54 @@
     font-style: italic; /* Optional: style for the date */
     color: rgba(255, 255, 255, 0.8); /* Optional: color for the date */
   }
+
+
+ /* Responsive Design */
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    min-width: 100%; /* Ensure full width on mobile */
+    margin-bottom: 20px;
+  }
+
+  .service-delivery-section h1 {
+    font-size: 2em; /* Reduce heading size for mobile */
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .service-item {
+    flex: 1 1 100%; /* Make each item take full width */
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-delivery-section h1 {
+    font-size: 2.2em;
+  }
+}
+
+/* Small Laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .service-item {
+    flex: 1 1 48%; /* Allow two items per row */
+  }
+
+  .service-delivery-section h1 {
+    font-size: 2.5em;
+  }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+  .service-item {
+    flex: 1 1 30%; /* Allow three items per row on large screens */
+  }
+}
