@@ -1,6 +1,6 @@
 import React from "react";
 import { Header,HeroSection,Waves ,Welcome,Campaigns,Projects,ServiceDelivery} from "../../components";
-
+import './Home.css'
 const menuItems = [
   { name: "Home", link: "#" },
   {
@@ -19,8 +19,8 @@ const menuItems = [
       { name: "Events", link: "#" },
     ],
   },
-  { name: "Policy Platform", link: "#" },
-  { name: "Get Involved", link: "#" },
+  { name: "Policy ", link: "#" },
+  { name: "Get ", link: "#" },
   { name: "Contact Us", link: "#" },
 
   // {
@@ -51,19 +51,16 @@ const menuItems = [
 
 const Home = () => {
   return (
-    <main>
-      <section>
+    <main className="home">
         <Header items={menuItems} />
-     
         <HeroSection/>
+       
 
-
-      <Waves/>
+      {/* <Waves/> */}
       <Welcome/>
       <ServiceDelivery/>
       {/* <Projects/> */}
-      <Campaigns/>
-      </section>
+      {/* <Campaigns/> */}
     </main>
   );
 };

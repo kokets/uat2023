@@ -1,2 +1,2 @@
-// import primaryLogo from "https://static.wixstatic.com/media/5de23b_e01406cc80994153b5a207d3a40d4d2c~mv2.png/v1/fill/w_262,h_57,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5de23b_e01406cc80994153b5a207d3a40d4d2c~mv2.png";
-// export default {primaryLogo};
+// import Twitter from "./twitter.svg";
+// export  {Twitter};

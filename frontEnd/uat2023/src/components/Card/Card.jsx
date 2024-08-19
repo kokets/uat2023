@@ -7,8 +7,8 @@ const Card = ({ title, content, icon }) => {
   return (
     <div className="card">
       <FontAwesomeIcon icon={icon} className="card-icon" />
-      <h3>{title}</h3>
-      <p>{content}</p>
+      <h3 className="title" >{title}</h3>
+      <p className="content" >{content}</p>
     </div>
   );
 };

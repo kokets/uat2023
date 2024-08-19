@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+:root {
+  font-family: "EB Garamond", serif;
+  --dark-blue: #0c0c43;
+  --red: #e32738;
+  --light-purple: #dad7e4;
+  --gray-purple: #808092;
+  --dark-maroon: #5f2746;
+  --dark-navy: #34284d;
+  --blue-gray: #848ca4;
+  --blue-burgundry: #3b0423;
+  --white: #FFFFFF;
+
+  --font-size-body: 1.406rem; /* 22.5px */
+  --font-size-heading-1: 2.8125rem; /* 45px */
+  --font-size-heading-2: 2.34375rem; /* 37.5px */
+  --font-size-heading-3: 1.5625rem; /* 25px */
+  --font-size-heading-4: 1.406rem; /* 22.5px */
+  --font-size-heading-5: 1.25rem; /* 20px */
+  --font-size-heading-6: 1.09375rem; /* 17.5px */
+  --font-size-nav: 1.406rem; /* 22.5px */
+  --font-size-button: 1.25rem; /* 20px */
+  --font-size-small: 1.09375rem; /* 17.5px */
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-light: 300;
+  --font-weight-extra-bold: 800;
+
+  // Breakpoints
+  --breakpoint-xs-mobile: 320px; // Extra small mobile devices
+  --breakpoint-sm-mobile: 480px; // Small mobile devices
+  --breakpoint-md-mobile: 600px; // Medium mobile devices
+  --breakpoint-lg-mobile: 768px; // Large mobile devices
+  --breakpoint-sm-tablet: 800px; // Small tablets
+  --breakpoint-md-tablet: 1024px; // Medium tablets
+  --breakpoint-lg-tablet: 1200px; // Large tablets
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Spectral", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "roboto", serif;
+}

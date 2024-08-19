@@ -11,15 +11,13 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <div className="welcomeMessage-Section">
-        <div className="welcome-Message">
-          <h2>SOUTH AFRICA</h2>
-      
-
-          <button>Join Change</button>
-        </div>
-        {/* <div className='leader-image'>
-                <img src='https://static.wixstatic.com/media/5de23b_9cd4c59ce17e46168e09b4e401b756aa~mv2.png/v1/fill/w_95,h_93,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/UAT%20icon.png'></img>
-          </div> */}
+        <h2>
+        <span>UNITED</span> <span className="africa">AFRICAN</span>   <span className="transformation">TRANSFORMATION</span></h2>
+        <p>
+          Pan-African movement aimed at eradicating poverty and guiding the
+          society towards economic freedom. <br/> Let's Get It Right!
+        </p>
+        <button>Join Change</button>
       </div>
     </div>
   );
