@@ -1,3 +1,101 @@
+.policySection{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // text-align: center;
+  padding: 40px 10%;
+ 
+}
+.cards{
+  --card-blend-mode: overlay;
+  --card-gradient: rgba(0, 0, 0, 0.8);
+  --card-gradient: var( --blue-gray), var(--dark-navy);
+  // background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  padding-bottom: 1rem;
+
+    flex: 1 1 200px; /* Allow items to grow and shrink, with a minimum base width */
+
+
+
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+ 
+  background-image: linear-gradient(
+    var(--card-gradient),
+    white max(9.5rem, 27vh)
+  );
+  overflow: hidden;
+
+  img {
+    border-radius: 0.5rem 0.5rem 0 0;
+    width: 100%;
+    object-fit: cover;
+    // height: max(10rem, 25vh);
+    max-height: max(10rem, 30vh);
+    aspect-ratio: 4/3;
+    mix-blend-mode: var(--card-blend-mode);
+    // filter: grayscale(100);
+
+    ~ * {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus-within {
+    --card-gradient: #8c8e8f max(8.5rem, 20vh);
+  }
+}
+
+.cards h3{
+  margin-top: 1rem;
+  cursor: pointer;
+
+}
+.card a{
+  color: inherit;
+  cursor: pointer;
+}
+// .policy-wrapper{
+//   text-align: center;
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+//   grid-gap: 1.5rem;
+//   max-width: 100%;
+//   width: 10ch;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+// }
+.policy-wrapper {
+  display: flex; /* Use Flexbox for horizontal layout */
+  flex-direction: row; /* Arrange items in a row */
+  flex-wrap: wrap; /* Allow wrapping of items to the next line if they exceed container width */
+  gap: 1.5rem; /* Space between items */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 100%;
+    // width: 280ch;
+
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+// .cardContainer{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+
+// }
 .waves {
   position: relative;
   width: 100%;

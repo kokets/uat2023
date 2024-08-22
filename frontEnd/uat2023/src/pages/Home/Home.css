@@ -1,0 +1,51 @@
+.middleBanner {
+    position: relative; /* Position relative to use the ::before pseudo-element */
+background-color: var(--dark-navy);
+    background-image: url('../../assets/logo.png'); /* Path to your background image */
+    background-repeat: repeat; /* Make the image repeat */
+    background-size: auto; /* Maintain the original size of the image */
+    background-position: top left; /* Align the image to the top-left corner */
+    height: 150px; /* Fixed height for the banner */
+    overflow: hidden; /* Ensure no overflow from the pseudo-element */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.middleBanner::before {
+    content: ''; /* Necessary for pseudo-elements */
+    position: absolute; /* Position absolutely within the .middleBanner */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the entire width */
+    height: 100%; /* Cover the entire height */
+    background: rgba(3, 6, 151, 0.8); /* Shadow color with transparency (black with 50% opacity) */
+    pointer-events: none; /* Ensure it doesn’t block interactions */
+    z-index: 1; /* Place it above the background image but below content */
+}
+
+/* Optional: If you want to ensure the content sits on top */
+.middleBanner > * {
+    position: relative; /* Ensure content appears above the shadow */
+    z-index: 2;
+}
+
+.middleBanner  button {
+    border-radius: 5px;
+    width: 100%; /* Responsive button width */
+    max-width: 300px; /* Limit the maximum width */
+    height: 70px;
+    font-size: var(--font-size-button);
+    font-weight: var(--font-weight-bold);
+    color: var(--red); /* Initial text color */
+    background-color: transparent; /* Initial background color */
+    border: 2px solid var(--red); /* Red border */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Button Hover Effects */
+  .middleBanner button:hover {
+    color: var(--white); /* Text color on hover */
+    background-color: var(--red); /* Background color on hover */
+    /* box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);  */
+  }

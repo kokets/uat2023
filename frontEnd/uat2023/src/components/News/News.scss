@@ -1,0 +1,116 @@
+/*newsSection styles.css */
+.newsSection{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 50px 10%;
+    flex-direction: column;
+    // background-color: var(--light-purple);
+}
+.newsContainer{
+  width: 100%;
+  height: 600px;
+  overflow: hidden; /* Hide overflow to ensure scrolling effect is contained */
+  white-space: nowrap; /* Prevent line breaks, ensuring items stay in a single line */
+  position: relative; /* Ensure position relative for animation container */
+  
+}
+.newsScroll {
+  display: flex; /* Flexbox for horizontal layout */
+  flex-direction: row; /* Arrange items in a row */
+  width: 200%; /* Ensure enough width for seamless scrolling */
+
+  animation: scroll-left 10s ease-in-out infinite; /* Apply scrolling animation */
+    width: max-content; /* Ensure width is based on content */
+
+}
+.newsCard {
+  display: inline-block; /* Allow cards to align horizontally */
+  width: 500px; /* Fixed width for each card */
+  height: 400px; /* Fixed height for each card */
+  margin-right: 1rem; /* Space between cards */
+
+  border-radius: 8px; /* Rounded corners for a modern look */
+
+  padding: 1rem; /* Padding inside cards */
+  box-sizing: border-box; /* Ensure padding is included in width and height */
+  position: relative; /* Ensure text and image are correctly positioned */
+}
+
+.newsCard img {
+  width: 100%; /* Make image fill the card width */
+  height: 320px; /* Fixed height for images */
+  object-fit: cover; /* Ensure image covers the area without distortion */
+  border-radius: 8px; /* Rounded corners for the image */
+}
+.newsCard h3 {
+  margin: 0.5rem 0; /* Spacing around the title */
+  font-size: 1.2rem; /* Font size for the title */
+  white-space: normal; /* Allow text to wrap into multiple lines */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+
+}
+
+.newsCard p {
+  margin: 0.5rem 0; /* Spacing around the date */
+  font-size: 0.9rem; /* Font size for the date */
+  color: #666; /* Color for the date */
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0); /* Start at the initial position */
+}
+40% {
+    transform: translateX(0); /* Stay at the initial position */
+}
+60% {
+    transform: translateX(-100%); /* Scroll left */
+}
+100% {
+    transform: translateX(-100%); /* Stay scrolled at the end */
+}
+}
+/* styles.css */
+
+
+  .news-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .news-image {
+    width: 500px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .news-summary {
+    flex: 1;
+  }
+  
+  .news-summary h3 {
+    margin: 0;
+  }
+  
+  .news-summary p {
+    margin: 0;
+  }
+  
+  #latest-news ul, #upcoming-events ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #latest-news li, #upcoming-events li {
+    margin-bottom: 10px;
+  }
+  
+  #breaking-news {
+    background-color: #ffeb3b;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  

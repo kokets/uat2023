@@ -1,5 +1,5 @@
 import React from "react";
-import { Header,HeroSection,Waves ,Welcome,Campaigns,Projects,ServiceDelivery} from "../../components";
+import { Header,HeroSection,Policy ,Welcome,Campaigns,Media,Newsletter,Footer,Copyright,News} from "../../components";
 import './Home.css'
 const menuItems = [
   { name: "Home", link: "#" },
@@ -12,16 +12,16 @@ const menuItems = [
     ],
   },
   {
-    name: "Campaigns",
+    name: "Newsroom",
     link: "#",
     subItems: [
-      { name: "Projects", link: "#" },
-      { name: "Events", link: "#" },
+      { name: "News", link: "#" },
+      { name: "Newsletter", link: "#" },
     ],
   },
   { name: "Policy ", link: "#" },
-  { name: "Get ", link: "#" },
-  { name: "Contact Us", link: "#" },
+  // { name: "Get ", link: "#" },
+  { name: "Contact", link: "#" },
 
   // {
   //   name: 'Services', link: '#', subItems: [
@@ -54,13 +54,16 @@ const Home = () => {
     <main className="home">
         <Header items={menuItems} />
         <HeroSection/>
-       
-
-      {/* <Waves/> */}
       <Welcome/>
-      <ServiceDelivery/>
-      {/* <Projects/> */}
-      {/* <Campaigns/> */}
+      <News/>
+      <Policy/>
+      <div className="middleBanner">
+      <button>Join Change</button>
+      </div>
+      <Media/>
+     
+      <Footer/>
+      <Copyright/>
     </main>
   );
 };

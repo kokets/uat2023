@@ -1,0 +1,203 @@
+.footerSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+    padding: 60px 10%;
+    gap: 20px;
+  background-color: var(--blue-gray);
+}
+
+.footerLogo {
+    flex-direction: column;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between image and text */
+  }
+  
+  .footerLogo img {
+    width: 250px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .footerLogo div {
+    font-size:var(--font-size-heading-2); /* Adjust font size as needed */
+    font-weight: bold; /* Bold text */
+    color: var(--white); 
+  }
+
+  /* Styling for the 'Why UAT' section */
+.whyUat {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .whyUat h1 {
+    font-size:var(--font-size-heading-3); /* Adjust font size as needed */
+    color: var(--white); 
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .whyUat ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .whyUat li {
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  .whyUat a {
+    text-decoration: none; /* Remove underline */
+    color: var(--white); 
+    font-size:var(--font-size-nav); /* Adjust font size as needed */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .whyUat a:hover {
+    color: var(--dark-blue); 
+  } 
+
+  /* Styling for the 'Why UAT' section */
+.getInvolved {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .getInvolved h1 {
+    font-size:var(--font-size-heading-3); /* Adjust font size as needed */
+    color: var(--white); 
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .getInvolved ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .getInvolved li {
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  .getInvolved a {
+    text-decoration: none; /* Remove underline */
+    color: var(--white); 
+    font-size:var(--font-size-nav); /* Adjust font size as needed */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .getInvolved a:hover {
+    color: var(--dark-blue); 
+  }
+   /* Styling for the 'Why UAT' section */
+.contactDetails {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .contactDetails h1 {
+    font-size:var(--font-size-heading-3); /* Adjust font size as needed */
+    color: var(--white); 
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .contactDetails ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .contactDetails li {
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  .contactDetails a {
+    text-decoration: none; /* Remove underline */
+    color: var(--white); 
+    font-size:var(--font-size-nav); /* Adjust font size as needed */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .contactDetails a:hover {
+    color: var(--dark-blue); 
+  }
+
+  /* Responsive Design for All Devices */
+
+/* Large Desktops and Up (min-width 1200px) */
+@media screen and (min-width: 1200px) {
+  .footerLogo img {
+    width: 300px; /* Larger logo for large screens */
+  }
+
+  .whyUat h1, .getInvolved h1, .contactDetails h1 {
+    font-size: var(--font-size-heading-2); /* Larger font size for headings */
+  }
+
+  .whyUat a, .getInvolved a, .contactDetails a {
+    font-size: var(--font-size-nav); /* Adjust font size */
+  }
+}
+
+/* Medium Desktops and Laptops (768px - 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footerSection {
+    padding: 40px 5%;
+    gap: 15px; /* Reduce gap between columns */
+  }
+
+  .footerLogo img {
+    width: 200px; /* Smaller logo */
+  }
+
+  .whyUat h1, .getInvolved h1, .contactDetails h1 {
+    font-size: var(--font-size-heading-3); /* Adjust heading size */
+  }
+
+  .whyUat a, .getInvolved a, .contactDetails a {
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+/* Tablets and Small Devices (max-width 768px) */
+@media screen and (max-width: 768px) {
+  .footerSection {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    align-items: center;
+    padding: 30px 5%;
+    gap: 30px; /* Increase gap between sections */
+  }
+
+  .footerLogo img {
+    width: 180px; /* Smaller logo for tablets */
+  }
+
+  .whyUat h1, .getInvolved h1, .contactDetails h1 {
+    font-size: var(--font-size-heading-3); /* Adjust heading size */
+  }
+
+  .whyUat a, .getInvolved a, .contactDetails a {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
+
+/* Very Small Screens (max-width 480px) */
+@media screen and (max-width: 480px) {
+  .footerSection {
+    padding: 20px 3%;
+    gap: 20px; /* Reduce gap between sections */
+  }
+
+  .footerLogo img {
+    width: 150px; /* Smaller logo for mobile screens */
+  }
+
+  .whyUat h1, .getInvolved h1, .contactDetails h1 {
+    font-size: 1.25rem; /* Adjust heading size */
+  }
+
+  .whyUat a, .getInvolved a, .contactDetails a {
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}

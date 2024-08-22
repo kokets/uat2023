@@ -1,14 +1,14 @@
 import React from 'react'
-import './Projects.css'
-const Projects = () => {
+import './Media.scss'
+const Media = () => {
   return (
-    <div className='project-Section'>
+    <div className='mediaSection'>
 
       <div>
-        <h1>Latest Projects</h1>
+        <h1>Media Gallery</h1>
   
       </div>
-      <div className='latest-projects'>
+      <div className='media'>
         <div>
         <h1>Angel of Planet Earth School at Ga-Phaahla Limpopo Provice, welcomed UAT in partnership with Tau Project at service delivery launch event</h1>
         </div>
@@ -17,4 +17,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default Media
