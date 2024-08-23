@@ -1,6 +1,6 @@
 .hero-section {
   position: relative; /* Ensure the hero section is positioned correctly relative to its contents */
-  height: 500px;
+  height: 800px;
   display: flex;
   flex-wrap: wrap;
   align-items: center; 
@@ -26,6 +26,8 @@
   background-position: center;
   background-image: url('https://static.wixstatic.com/media/5de23b_0cb19e849f344d408286e65ee85787f7~mv2.jpg/v1/fill/w_1006,h_370,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5de23b_0cb19e849f344d408286e65ee85787f7~mv2.jpg');
   z-index: -1; /* Place behind the content */
+  animation: imageSlide 15s infinite; /* Animation for rotating images */
+
 }
 
 .hero-section::after {
@@ -39,18 +41,33 @@
   opacity: 0.6; 
   z-index: -1; /* Place behind the content but above the background image */
 }
-
+@keyframes imageSlide {
+  0% {
+    background-image: url('https://static.wixstatic.com/media/5de23b_0cb19e849f344d408286e65ee85787f7~mv2.jpg');
+  }
+  33% {
+    background-image: url("../../assets/417396373_439235289043474_5960945128761669819_n.jpg"); /* Replace with second image URL */
+  }
+  66% {
+    background-image: url('../../assets/439087982_424595483840788_7813939288684755964_n.jpg'); /* Replace with third image URL */
+  }
+  100% {
+    background-image: url('../../assets/439199782_424432030523800_461860690834365443_n.jpg');
+  }
+}
 /* Welcome Message Section */
 .welcomeMessage-Section {
+  display: flex;
   justify-content: center;
   align-items: center; /* Center content vertically */
+  flex-direction: column;
   width: 100%; 
   color: rgb(241, 235, 235);
 }
 
 
 .welcomeMessage-Section h2 {
-  font-size: 100px;
+  font-size: 50px;
   font-weight: var(--font-weight-bold);
 
   /* padding: 2px; */
@@ -75,6 +92,8 @@
   border-radius: 5px;
   width: 100%; /* Responsive button width */
   max-width: 200px; /* Limit the maximum width */
+ 
+
   height: 60px;
   font-size: var(--font-size-button);
   font-weight: var(--font-weight-bold);
@@ -95,7 +114,7 @@
 /* For large desktops and up */
 @media screen and (min-width: 1200px) {
   .welcomeMessage-Section h2 {
-    font-size: 4vw; /* Slightly smaller heading for larger screens */
+    /* font-size: 4vw;  */
   }
   .welcomeMessage-Section p {
     font-size: 1.5rem;

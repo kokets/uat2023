@@ -5,7 +5,7 @@ background-color: var(--dark-navy);
     background-repeat: repeat; /* Make the image repeat */
     background-size: auto; /* Maintain the original size of the image */
     background-position: top left; /* Align the image to the top-left corner */
-    height: 150px; /* Fixed height for the banner */
+    height: 250px; /* Fixed height for the banner */
     overflow: hidden; /* Ensure no overflow from the pseudo-element */
     justify-content: center;
     align-items: center;

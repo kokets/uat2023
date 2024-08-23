@@ -1,293 +1,134 @@
 .policySection{
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+ 
+}
+.cardContainer{
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // text-align: center;
-  padding: 40px 10%;
- 
+  width: 100%;
+  padding: 20px; /* Optional: Add some padding to the container */
+  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
 }
-.cards{
-  --card-blend-mode: overlay;
-  --card-gradient: rgba(0, 0, 0, 0.8);
-  --card-gradient: var( --blue-gray), var(--dark-navy);
-  // background-color: var(--white);
-  border-radius: 0.5rem;
-  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-  padding-bottom: 1rem;
-
-    flex: 1 1 200px; /* Allow items to grow and shrink, with a minimum base width */
-
-
-
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
- 
-  background-image: linear-gradient(
-    var(--card-gradient),
-    white max(9.5rem, 27vh)
-  );
-  overflow: hidden;
-
-  img {
-    border-radius: 0.5rem 0.5rem 0 0;
-    width: 100%;
-    object-fit: cover;
-    // height: max(10rem, 25vh);
-    max-height: max(10rem, 30vh);
-    aspect-ratio: 4/3;
-    mix-blend-mode: var(--card-blend-mode);
-    // filter: grayscale(100);
-
-    ~ * {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-  }
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-
-  &:hover,
-  &:focus-within {
-    --card-gradient: #8c8e8f max(8.5rem, 20vh);
-  }
+.policyCards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns, each taking up equal space */
+  gap: 10px; /* Space between the grid items */
+  justify-content: center;
+  width: 100%;
+  padding: 20px; /* Optional: Add some padding to the container */
+  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
 }
 
-.cards h3{
-  margin-top: 1rem;
-  cursor: pointer;
-
+.socialCard {
+  position: relative;
+  background-color: rgba(226, 226, 240, 0.8); 
+  // width: 300px; /* Adjust the card width */
+  padding: 15px;
+  // background-color: #fff; /* Card background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  border-radius: 8px;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance glass look */
 }
-.card a{
-  color: inherit;
-  cursor: pointer;
-}
-// .policy-wrapper{
-//   text-align: center;
-//   list-style: none;
-//   padding: 0;
-//   margin: 0;
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-//   grid-gap: 1.5rem;
-//   max-width: 100%;
-//   width: 10ch;
-//   padding-left: 1rem;
-//   padding-right: 1rem;
-// }
-.policy-wrapper {
-  display: flex; /* Use Flexbox for horizontal layout */
-  flex-direction: row; /* Arrange items in a row */
-  flex-wrap: wrap; /* Allow wrapping of items to the next line if they exceed container width */
-  gap: 1.5rem; /* Space between items */
-  padding-left: 1rem;
-  padding-right: 1rem;
-  max-width: 100%;
-    // width: 280ch;
 
-  box-sizing: border-box; /* Ensure padding is included in width calculations */
-}
-// .cardContainer{
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-
-// }
-.waves {
+.mainImageWrapper {
   position: relative;
   width: 100%;
-  height: 15vh;
-  margin-bottom: -7px;
-  min-height: 100px;
-  max-height: 150px;
-  order: 1;
-
+  height: 300px; /* Adjust as needed */
+  overflow: hidden;
 }
 
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
-.waveSection {
-  margin-top: -130px;
-  /* Adjust this value as needed */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.logoWrapper {
+  position: absolute;
+  top: 60%; /* Center the logo vertically */
+  left: 50%; /* Center the logo horizontally */
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure logo is above both image and content */
+}
+
+.logo {
+  width: 60px; /* Adjust logo size */
+  height: auto;
+}
+
+.socialContent {
   position: relative;
+  top: -50px; /* Move the content upwards to overlap with the image */
+  z-index: 1; /* Ensure content appears below the logo but above the image */
+  // background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  background-color: rgba(226, 226, 240, 0.8); 
+  
+  padding: 5px;
+  border-radius: 8px;
+  text-align: left;
 }
 
-.party-Slogan {
-  position: relative;
-
-  color: red;
-  margin-top: -110px;
-  order: 2;
-  /* background-color: red; */
+.socialContent h3 a {
+  text-decoration: none;
+  color: #000;
 }
 
-.slogan {
-  font-size: 100px;
-  color: transparent;
-  /* Make the text itself transparent */
-  -webkit-text-stroke: 2px rgb(241, 233, 233);
-  /* Add stroke to the text */
-  background: transparent;
-  /* Ensure background is transparent */
-  font-weight: var(--font-weight-bold);
+.socialContent p {
+  color: #555;
 }
 
-
-/* Animation */
-
-.parallax>use {
-  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-}
-
-.parallax>use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-
-.parallax>use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-
-.parallax>use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-
-.parallax>use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(85px, 0, 0);
+/* Responsive Styles */
+@media (max-width: 320px) {
+  .policyCards {
+    grid-template-columns: 1fr; /* 1 column for extra small screens */
   }
 }
 
-/* Vendor Prefixes for Animation */
-@-webkit-keyframes move-forever {
-  0% {
-    -webkit-transform: translate3d(-90px, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate3d(85px, 0, 0);
+@media (min-width: 320px) and (max-width: 480px ){
+  .policyCards {
+    grid-template-columns: 1fr; /* 1 column for small mobile screens */
   }
 }
 
-/*Shrinking for mobile*/
-/* @media (max-width: 768px) {
-    .waves {
-      height:40px;
-      min-height:40px;
-    }
-    .content {
-      height:30vh;
-    }
-    h1 {
-      font-size:24px;
-    }
-  } */
-
-/* Responsive Designs */
-
-/* Mobile Devices (up to 480px) */
-@media (max-width: 480px) {
-  .waves {
-    height: 10vh;
-    /* Adjust height for smaller screens */
-    min-height: 80px;
-    /* Adjust min-height */
-    max-height: 120px;
-    /* Adjust max-height */
-  }
-
-  .content {
-    height: 40vh;
-    /* Adjust height for smaller screens */
-  }
-
-  .waveSection {
-    margin-top: -100px;
-    /* Adjust overlap for smaller screens */
-  }
-  .party-Slogan {
-    margin-top: -50px; /* Adjust as needed */
-    font-size: 24px; /* Adjust the font size if applicable */
-  }
-
-  .slogan {
-    font-size: 24px; /* Adjust the font size for small screens */
-    -webkit-text-stroke: 1px rgb(241, 233, 233); /* Reduce stroke width */
+@media (min-width: 480px) and (max-width: 600px) {
+  .policyCards {
+    grid-template-columns: 1fr ; /* 2 columns for medium mobile screens */
   }
 }
 
-/* Tablets (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .waves {
-    height: 12vh;
-    /* Adjust height for medium screens */
-    min-height: 90px;
-    /* Adjust min-height */
-    max-height: 130px;
-    /* Adjust max-height */
-  }
-
-  .content {
-    height: 45vh;
-    /* Adjust height for medium screens */
-  }
-
-  .waveSection {
-    margin-top: -115px;
-    /* Adjust overlap for medium screens */
-  }
-  .party-Slogan {
-    margin-top: -100px; /* Adjust as needed */
-  }
-
-  .slogan {
-    font-size: 60px; /* Adjust the font size for small laptops */
-    -webkit-text-stroke: 1.5px rgb(241, 233, 233); /* Adjust stroke width */
+@media (min-width:600px) and (max-width: 768px) {
+  .policyCards {
+    grid-template-columns: 1fr ; /* 3 columns for large mobile screens */
   }
 }
 
-/* Large Screens (1025px and above) */
-@media (min-width: 1025px) {
-  .waves {
-    height: 15vh;
-    /* Original height for large screens */
-    min-height: 100px;
-    /* Original min-height */
-    max-height: 150px;
-    /* Original max-height */
+@media (min-width: 768px) and (max-width: 800px) {
+  .policyCards {
+    grid-template-columns: 1fr  ; /* 3 columns for small tablets */
   }
+}
 
-  .content {
-    height: 50vh;
-    /* Original height */
+@media (min-width: 800px) and (max-width: 1024px) {
+  .policyCards {
+    grid-template-columns: 1fr  ; /* 4 columns for medium tablets */
   }
-
-  .waveSection {
-    margin-top: -130px;
-    /* Original overlap */
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .policyCards {
+    grid-template-columns: 1fr  ; /* 4 columns for medium tablets */
   }
-  .party-Slogan {
-    margin-top: -110px; /* Original margin for large screens */
-  }
-
-  .slogan {
-    font-size: 100px; /* Original font size for large screens */
-    -webkit-text-stroke: 2px rgb(241, 233, 233); /* Original stroke width */
+}
+@media (min-width: 1200px) and (max-width: 2000px) {
+  .policyCards {
+    grid-template-columns: 1fr  1fr ; /* 4 columns for medium tablets */
   }
 }

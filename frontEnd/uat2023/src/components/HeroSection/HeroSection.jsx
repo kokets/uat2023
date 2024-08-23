@@ -12,11 +12,13 @@ const HeroSection = () => {
     <div className="hero-section">
       <div className="welcomeMessage-Section">
         <h2>
-        <span>UNITED</span> <span className="africa">AFRICAN</span>   <span className="transformation">TRANSFORMATION</span></h2>
-        <p>
+          <span>LET'S GET</span> <span className="africa">SOUTH AFRICA</span>{" "}
+          <span className="transformation">SAFE AND WORKING</span>
+        </h2>
+        {/* <p>
           Pan-African movement aimed at eradicating poverty and guiding the
           society towards economic freedom. <br/> Let's Get It Right!
-        </p>
+        </p> */}
         <button>Join Change</button>
       </div>
     </div>

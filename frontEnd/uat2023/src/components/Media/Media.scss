@@ -1,10 +1,118 @@
-.project-Section{
-    flex: 1 1 auto;
+.mediaSection{
+    
 
   display: flex;
   flex-wrap: wrap;
 
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
     /* background-color: var(--dark-blue); */
+    padding: 50px 10%;
+}
+.media {
+  position: relative;
+  width: 100%;
+  text-align: center; /* Center title and other text horizontally */
+
+}
+
+.mediaGallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // position: relative;
+  // overflow: hidden;
+}
+
+.mediaImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between iframes */
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.mediaImage > div {
+  flex: 1 1 35%; /* Adjust width as needed */
+  // max-width: w; /* Maximum width for iframes */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.mediaImage iframe {
+  width: 100%;
+  height: 755px; /* Adjust height to maintain aspect ratio */
+  border: none; /* Remove default border */
+}
+
+/* Responsive Styles */
+@media (max-width: var(--breakpoint-xs-mobile)) {
+  .mediaImage > div {
+    flex: 1 1 100%; /* Full width for extra small screens */
+  }
+
+  .mediaImage iframe {
+    height: 400px; /* Reduce height for smaller screens */
+  }
+}
+
+@media (min-width: var(--breakpoint-xs-mobile)) and (max-width: var(--breakpoint-sm-mobile)) {
+  .mediaImage > div {
+    flex: 1 1 100%; /* Full width for small mobile screens */
+  }
+
+  .mediaImage iframe {
+    height: 450px; /* Adjust height for small mobile screens */
+  }
+}
+
+@media (min-width: var(--breakpoint-sm-mobile)) and (max-width: var(--breakpoint-md-mobile)) {
+  .mediaImage > div {
+    flex: 1 1 48%; /* Almost half width for medium mobile screens */
+  }
+
+  .mediaImage iframe {
+    height: 500px; /* Adjust height for medium mobile screens */
+  }
+}
+
+@media (min-width: var(--breakpoint-md-mobile)) and (max-width: var(--breakpoint-lg-mobile)) {
+  .mediaImage > div {
+    flex: 1 1 48%; /* Almost half width for large mobile screens */
+  }
+
+  .mediaImage iframe {
+    height: 600px; /* Adjust height for large mobile screens */
+  }
+}
+
+@media (min-width: var(--breakpoint-lg-mobile)) and (max-width: var(--breakpoint-sm-tablet)) {
+  .mediaImage > div {
+    flex: 1 1 30%; /* About a third width for small tablets */
+  }
+
+  .mediaImage iframe {
+    height: 650px; /* Adjust height for small tablets */
+  }
+}
+
+@media (min-width: var(--breakpoint-sm-tablet)) and (max-width: var(--breakpoint-md-tablet)) {
+  .mediaImage > div {
+    flex: 1 1 30%; /* About a third width for medium tablets */
+  }
+
+  .mediaImage iframe {
+    height: 700px; /* Adjust height for medium tablets */
+  }
+}
+
+@media (min-width: var(--breakpoint-md-tablet)) {
+  .mediaImage > div {
+    flex: 1 1 30%; /* About a third width for large tablets */
+  }
+
+  .mediaImage iframe {
+    height: 755px; /* Adjust height for large tablets */
+  }
 }

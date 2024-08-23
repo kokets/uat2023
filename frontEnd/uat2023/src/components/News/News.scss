@@ -1,41 +1,47 @@
-/*newsSection styles.css */
-.newsSection{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center; 
-    justify-content: space-between;
-    padding: 50px 10%;
-    flex-direction: column;
-    // background-color: var(--light-purple);
+
+.newsSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+  // flex-direction: column;
+  // background-color: var(--light-purple);
 }
-.newsContainer{
+.newsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: 600px;
-  overflow: hidden; /* Hide overflow to ensure scrolling effect is contained */
-  white-space: nowrap; /* Prevent line breaks, ensuring items stay in a single line */
-  position: relative; /* Ensure position relative for animation container */
-  
+  // background-color: var(--dark-blue);
+  padding: 20px; /* Optional: Add some padding to the container */
+  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
+  // overflow: visible; /* Allows the container to expand with the content */
+
 }
 .newsScroll {
-  display: flex; /* Flexbox for horizontal layout */
-  flex-direction: row; /* Arrange items in a row */
-  width: 200%; /* Ensure enough width for seamless scrolling */
-
-  animation: scroll-left 10s ease-in-out infinite; /* Apply scrolling animation */
-    width: max-content; /* Ensure width is based on content */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns, each taking up equal space */
+  gap: 20px; /* Space between the grid items */
+  justify-content: center;
+  width: 100%;
+  padding: 20px; /* Optional: Add some padding to the container */
+  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
 
 }
 .newsCard {
-  display: inline-block; /* Allow cards to align horizontally */
-  width: 500px; /* Fixed width for each card */
-  height: 400px; /* Fixed height for each card */
-  margin-right: 1rem; /* Space between cards */
+  background: rgba(226, 226, 240, 0.8); 
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance glass look */
 
-  border-radius: 8px; /* Rounded corners for a modern look */
-
-  padding: 1rem; /* Padding inside cards */
-  box-sizing: border-box; /* Ensure padding is included in width and height */
-  position: relative; /* Ensure text and image are correctly positioned */
 }
 
 .newsCard img {
@@ -48,8 +54,7 @@
   margin: 0.5rem 0; /* Spacing around the title */
   font-size: 1.2rem; /* Font size for the title */
   white-space: normal; /* Allow text to wrap into multiple lines */
-    word-wrap: break-word; /* Break long words to prevent overflow */
-
+  word-wrap: break-word; /* Break long words to prevent overflow */
 }
 
 .newsCard p {
@@ -57,60 +62,62 @@
   font-size: 0.9rem; /* Font size for the date */
   color: #666; /* Color for the date */
 }
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0); /* Start at the initial position */
+.newsCard hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--dark-blue);
+  margin: 10px auto;
+  // z-index: 5;
 }
-40% {
-    transform: translateX(0); /* Stay at the initial position */
-}
-60% {
-    transform: translateX(-100%); /* Scroll left */
-}
-100% {
-    transform: translateX(-100%); /* Stay scrolled at the end */
-}
-}
-/* styles.css */
 
+.newsCard .date {
+  font-size: 14px;
+  color: var(--dark-blue);
+  margin-top: 10px;
+}
+/* Responsive Styles */
+@media (max-width: 320px) {
+  .newsScroll {
+    grid-template-columns: 1fr; /* 1 column for extra small screens */
+  }
+}
 
-  .news-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
+@media (min-width: 320px) and (max-width: 480px ){
+  .newsScroll {
+    grid-template-columns: 1fr; /* 1 column for small mobile screens */
   }
-  
-  .news-image {
-    width: 500px;
-    height: auto;
-    margin-right: 20px;
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+  .newsScroll {
+    grid-template-columns: 1fr ; /* 2 columns for medium mobile screens */
   }
-  
-  .news-summary {
-    flex: 1;
+}
+
+@media (min-width:600px) and (max-width: 768px) {
+  .newsScroll {
+    grid-template-columns: 1fr ; /* 3 columns for large mobile screens */
   }
-  
-  .news-summary h3 {
-    margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .newsScroll {
+    grid-template-columns: 1fr  ; /* 3 columns for small tablets */
   }
-  
-  .news-summary p {
-    margin: 0;
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .newsScroll {
+    grid-template-columns: 1fr  ; /* 4 columns for medium tablets */
   }
-  
-  #latest-news ul, #upcoming-events ul {
-    list-style-type: none;
-    padding: 0;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .newsScroll {
+    grid-template-columns: 1fr  ; /* 4 columns for medium tablets */
   }
-  
-  #latest-news li, #upcoming-events li {
-    margin-bottom: 10px;
+}
+@media (min-width: 1200px) and (max-width: 2000px) {
+  .newsScroll {
+    grid-template-columns: 1fr  1fr ; /* 4 columns for medium tablets */
   }
-  
-  #breaking-news {
-    background-color: #ffeb3b;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
+}

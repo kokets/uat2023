@@ -4,7 +4,7 @@
   /* background-color: var(--dark-blue); */
   /* color: var(--white); */
   align-items: center; 
-   justify-content: space-between;
+   justify-content: center;
   padding: 0 10%;
   overflow: hidden; 
 }
@@ -32,22 +32,29 @@
   z-index: -1; 
   /* border-radius: 20px;  */
 }
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .welcome-message p  {
   /* color: var(--red); */
+  text-align: center;
   font-size: var(--font-size-heading-3);
 }
-.welcome-message  button {
+/* .welcome-message  button {
   border-radius: 5px;
-  width: 100%; /* Responsive button width */
-  max-width: 200px; /* Limit the maximum width */
+  width: 100%; 
+  max-width: 200px; 
   height: 60px;
   font-size: var(--font-size-button);
   font-weight: var(--font-weight-bold);
-  color: var(--red); /* Initial text color */
-  background-color: transparent; /* Initial background color */
-  border: 2px solid var(--red); /* Red border */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
+  color: var(--red); 
+  background-color: transparent; 
+  border: 2px solid var(--red); 
+  transition: all 0.3s ease; 
+} */
 
 /* Button Hover Effects */
 .welcome-message button:hover {
@@ -71,6 +78,6 @@
 
 }
 .united{
-  color: var(--dark-navy);
+  color: var(--dark-blue);
 }
 
