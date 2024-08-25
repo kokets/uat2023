@@ -34,6 +34,7 @@
 }
 .welcome-message {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -43,18 +44,7 @@
   text-align: center;
   font-size: var(--font-size-heading-3);
 }
-/* .welcome-message  button {
-  border-radius: 5px;
-  width: 100%; 
-  max-width: 200px; 
-  height: 60px;
-  font-size: var(--font-size-button);
-  font-weight: var(--font-weight-bold);
-  color: var(--red); 
-  background-color: transparent; 
-  border: 2px solid var(--red); 
-  transition: all 0.3s ease; 
-} */
+
 
 /* Button Hover Effects */
 .welcome-message button:hover {
@@ -64,8 +54,9 @@
 }
 
 .welcome-message h2 {
-  font-size: 50px;
+  font-size: 2rem;
   font-weight: var(--font-weight-bold);
+  text-align: center;
 
   /* padding: 2px; */
 }
@@ -81,3 +72,66 @@
   color: var(--dark-blue);
 }
 
+/* Responsive Styles */
+@media (max-width: 320px) {
+  .welcome-message h2 {
+    font-size: 1.5rem;
+  
+  }
+
+  
+}
+
+@media (min-width: 320px) and (max-width: 480px ){
+  .welcome-message h2 {
+    font-size: 1.8rem;
+  
+  }
+  
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+  .welcome-message h2 {
+    font-size: 1.8rem;
+  
+  }
+
+}
+
+@media (min-width:600px) and (max-width: 768px) { 
+  .welcome-message h2 {
+    font-size: 1.8rem;
+  
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .welcome-message h2 {
+    font-size: 1.8rem;
+  
+  }
+
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .welcome-message h2 {
+    font-size: 1.8rem;
+  
+  }
+
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .welcome-message h2 {
+    font-size: 1.8rem;
+  
+  }
+
+}
+@media (min-width: 1200px) and (max-width: 2000px) {
+  .welcome-message h2 {
+    font-size: 1.8rem;
+  
+  }
+
+}

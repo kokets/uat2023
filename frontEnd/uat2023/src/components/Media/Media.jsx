@@ -40,13 +40,13 @@ const Media = () => {
         </div>
 
         <div className="mediaGallery">
-          <SimpleImageSlider
+          {/* <SimpleImageSlider
             width={996}
             height={504}
             images={images}
             showBullets={true}
             showNavs={true}
-          />
+          /> */}
   
         </div>
         <div className="mediaImage">

@@ -1,3 +1,7 @@
+.home{
+    flex-wrap: wrap;
+
+}
 .middleBanner {
     position: relative; /* Position relative to use the ::before pseudo-element */
 background-color: var(--dark-navy);

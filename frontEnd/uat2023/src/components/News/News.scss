@@ -4,120 +4,95 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 10%;
+  padding: 0 10%;
   // flex-direction: column;
   // background-color: var(--light-purple);
 }
-.newsContainer {
+.news-Title{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  text-align: center;
   width: 100%;
-  // background-color: var(--dark-blue);
-  padding: 20px; /* Optional: Add some padding to the container */
-  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
-  // overflow: visible; /* Allows the container to expand with the content */
+  // padding: 20px;
 
 }
-.newsScroll {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 columns, each taking up equal space */
-  gap: 20px; /* Space between the grid items */
-  justify-content: center;
-  width: 100%;
-  padding: 20px; /* Optional: Add some padding to the container */
-  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
 
-}
-.newsCard {
-  background: rgba(226, 226, 240, 0.8); 
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+.news-Cards{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance glass look */
+  justify-content: center;
+  // align-items: center;
+  flex-wrap: wrap;
+  background-color: blue;
+}
+.news-Card{
+  width: 325px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 20px;
+  background-color: var(--white);
 
 }
-
-.newsCard img {
-  width: 100%; /* Make image fill the card width */
-  height: 320px; /* Fixed height for images */
-  object-fit: cover; /* Ensure image covers the area without distortion */
-  border-radius: 8px; /* Rounded corners for the image */
+.news-Card img{
+width: 100%;
+height: auto;
 }
-.newsCard h3 {
-  margin: 0.5rem 0; /* Spacing around the title */
-  font-size: 1.2rem; /* Font size for the title */
+
+
+.news-Content h1{
+  font-size: 0.8rem; /* Font size for the title */
   white-space: normal; /* Allow text to wrap into multiple lines */
   word-wrap: break-word; /* Break long words to prevent overflow */
+  margin-bottom: 8px;
+  font-family: "EB Garamond", serif;
+  color: var(--dark-blue);
 }
-
-.newsCard p {
-  margin: 0.5rem 0; /* Spacing around the date */
-  font-size: 0.9rem; /* Font size for the date */
-  color: #666; /* Color for the date */
+.news-Content{
+  padding: 16px;
 }
-.newsCard hr {
-  width: 100%;
-  border: 0;
-  border-top: 1px solid var(--dark-blue);
-  margin: 10px auto;
-  // z-index: 5;
-}
-
-.newsCard .date {
-  font-size: 14px;
+.news-Content  .date {
+  font-size: 1.05rem;
   color: var(--dark-blue);
   margin-top: 10px;
 }
-/* Responsive Styles */
+
+ 
 @media (max-width: 320px) {
-  .newsScroll {
-    grid-template-columns: 1fr; /* 1 column for extra small screens */
-  }
+
 }
 
 @media (min-width: 320px) and (max-width: 480px ){
-  .newsScroll {
-    grid-template-columns: 1fr; /* 1 column for small mobile screens */
+  .news-Card{
+    max-width: 420px;
+  
+  
   }
 }
 
 @media (min-width: 480px) and (max-width: 600px) {
-  .newsScroll {
-    grid-template-columns: 1fr ; /* 2 columns for medium mobile screens */
+  .news-Card{
+    width: 355px;
+  
+  
   }
 }
 
 @media (min-width:600px) and (max-width: 768px) {
-  .newsScroll {
-    grid-template-columns: 1fr ; /* 3 columns for large mobile screens */
-  }
+
 }
 
 @media (min-width: 768px) and (max-width: 800px) {
-  .newsScroll {
-    grid-template-columns: 1fr  ; /* 3 columns for small tablets */
-  }
+
 }
 
 @media (min-width: 800px) and (max-width: 1024px) {
-  .newsScroll {
-    grid-template-columns: 1fr  ; /* 4 columns for medium tablets */
-  }
+
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .newsScroll {
-    grid-template-columns: 1fr  ; /* 4 columns for medium tablets */
-  }
+
 }
 @media (min-width: 1200px) and (max-width: 2000px) {
-  .newsScroll {
-    grid-template-columns: 1fr  1fr ; /* 4 columns for medium tablets */
-  }
+
 }

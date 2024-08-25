@@ -10,7 +10,7 @@ import "./HeroSection.css"; // Make sure to create the necessary CSS file
 const HeroSection = () => {
   return (
     <div className="hero-section">
-      <div className="welcomeMessage-Section">
+      <div className="hero-Contain">
         <h2>
           <span>LET'S GET</span> <span className="africa">SOUTH AFRICA</span>{" "}
           <span className="transformation">SAFE AND WORKING</span>

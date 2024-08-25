@@ -107,7 +107,6 @@ const Policy = () => {
             </div>
           </motion.div>
         ))}
-
         {/* <ul className="policy-wrapper">
           <li className="cards">
             <img src={Social}></img>

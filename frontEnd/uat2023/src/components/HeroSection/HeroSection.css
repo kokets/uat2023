@@ -1,6 +1,6 @@
 .hero-section {
   position: relative; /* Ensure the hero section is positioned correctly relative to its contents */
-  height: 800px;
+  height: 700px;
   display: flex;
   flex-wrap: wrap;
   align-items: center; 
@@ -56,8 +56,9 @@
   }
 }
 /* Welcome Message Section */
-.welcomeMessage-Section {
+.hero-Contain{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center; /* Center content vertically */
   flex-direction: column;
@@ -66,11 +67,10 @@
 }
 
 
-.welcomeMessage-Section h2 {
-  font-size: 50px;
+.hero-Contain h2 {
+  font-size: 2rem;
   font-weight: var(--font-weight-bold);
 
-  /* padding: 2px; */
 }
 .transformation{
   color: red;
@@ -83,17 +83,11 @@
 
 
 
-.welcomeMessage-Section p  {
-  /* color: var(--red); */
-  font-size: var(--font-size-heading-3);
-}
 
-.welcomeMessage-Section  button {
+.hero-Contain  button {
   border-radius: 5px;
   width: 100%; /* Responsive button width */
   max-width: 200px; /* Limit the maximum width */
- 
-
   height: 60px;
   font-size: var(--font-size-button);
   font-weight: var(--font-weight-bold);
@@ -104,81 +98,157 @@
 }
 
 /* Button Hover Effects */
-.welcomeMessage-Section  button:hover {
+.hero-Contain  button:hover {
   color: var(--white); /* Text color on hover */
   background-color: var(--red); /* Background color on hover */
   /* box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);  */
 }
-/* Responsive Design for All Devices */
 
-/* For large desktops and up */
+/* Responsive Styles */
+@media (max-width: 320px) {
+  .hero-Contain h2 {
+    font-size: 1.02rem;
+  
+  }
+  .hero-section {
+    height: 300px;
+  }
+  
+}
+
+@media (min-width: 320px) and (max-width: 480px ){
+  .hero-Contain h2 {
+    font-size: 1.2rem;
+  
+  }
+  .hero-section {
+    height: 400px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+  .hero-Contain h2 {
+    font-size: 1.2rem;
+  
+  }
+  .hero-section {
+    height: 400px;
+  }
+}
+
+@media (min-width:600px) and (max-width: 768px) { 
+  .hero-Contain h2 {
+    font-size: 1.3rem;
+  
+  }
+  .hero-section {
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .hero-Contain h2 {
+    font-size: 1.4rem;
+  
+  }
+  .hero-section {
+    height: 400px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .hero-Contain h2 {
+    font-size: 1.4rem;
+  
+  }
+  .hero-section {
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .hero-Contain h2 {
+    font-size: 1.5rem;
+  
+  }
+  .hero-section {
+    height: 400px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 2000px) {
+  .hero-Contain h2 {
+    font-size: 1.8rem;
+  
+  }
+  .hero-section {
+    height: 400px;
+  }
+}
+/* 
 @media screen and (min-width: 1200px) {
   .welcomeMessage-Section h2 {
-    /* font-size: 4vw;  */
   }
   .welcomeMessage-Section p {
     font-size: 1.5rem;
   }
 }
 
-/* For medium desktops and laptops (between 768px and 1200px) */
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero-section {
-    padding: 0 5%; /* Slightly reduce padding */
+    padding: 0 5%; 
   }
 
   .welcomeMessage-Section h2 {
-    font-size: 6vw; /* Larger heading for this range */
+    font-size: 6vw; 
   }
 
   .welcomeMessage-Section p {
-    font-size: 1.2rem; /* Font size for text */
+    font-size: 1.2rem; 
   }
 
   .welcomeMessage-Section button {
-    max-width: 180px; /* Adjust button width */
-    height: 55px; /* Adjust button height */
+    max-width: 180px; 
+    height: 55px; 
   }
 }
 
-/* For tablets and small devices (smaller than 768px) */
+
 @media screen and (max-width: 767px) {
   .hero-section {
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column;
     justify-content: center; 
-    padding: 0 5%; /* Further reduce padding */
+    padding: 0 5%; 
   }
 
   .welcomeMessage-Section h2 {
-    font-size: 8vw; /* Larger font size for smaller screens */
+    font-size: 8vw;
   }
 
   .welcomeMessage-Section p {
-    font-size: 1rem; /* Smaller font size for better readability */
+    font-size: 1rem; 
   }
 
   .welcomeMessage-Section button {
-    max-width: 150px; /* Adjust button size */
+    max-width: 150px; 
     height: 50px;
   }
 }
-
-/* For very small screens (phones smaller than 480px) */
+-
 @media screen and (max-width: 480px) {
   .hero-section {
     padding: 0 3%;
   }
 
   .welcomeMessage-Section h2 {
-    font-size: 10vw; /* Larger heading for very small screens */
+    font-size: 10vw; 
   }
 
   .welcomeMessage-Section p {
-    font-size: 0.875rem; /* Smaller text size */
+    font-size: 0.875rem; 
   }
 
   .welcomeMessage-Section button {
-    max-width: 130px; /* Further reduce button size */
+    max-width: 130px;
     height: 45px;
   }
-}
+} */
