@@ -32,6 +32,7 @@ import {
   Social,
   Law,
   Event1,
+  Event2,
 } from "../../assets/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -44,36 +45,31 @@ const News = () => {
     {
       id: 1,
       image: image15,
-      title:
-        " Mother Nature at Ekurhuleni Duduza celebrating ",
+      title: " Mother Nature at Ekurhuleni Duduza celebrating ",
       date: "19 August 2024",
     },
     {
       id: 2,
       image: image16,
-      title:
-        "UAT General Secretary Japhter Baloyi visited ",
+      title: "UAT General Secretary Japhter Baloyi visited ",
       date: "19 August 2024",
     },
     {
       id: 3,
       image: image17,
-      title:
-        "UAT delegates National Spokesperson Doer  ",
+      title: "UAT delegates National Spokesperson Doer  ",
       date: "19 August 2024",
     },
     {
       id: 4,
       image: image4,
-      title:
-        "  United Africans Transformation and Tau Project ",
+      title: "  United Africans Transformation and Tau Project ",
       date: "19 August 2024",
     },
     {
       id: 5,
       image: image19,
-      title:
-        "Ekurhuleni Doers was giving away sanitary ",
+      title: "Ekurhuleni Doers was giving away sanitary ",
       date: "19 August 2024",
     },
     // {
@@ -120,16 +116,6 @@ const News = () => {
       </div>
 
       <div className="news-Cards">
-        {/* <div className="news-Card">
-          <img src={image15} />
-          <h1>
-            {" "}
-            Mother Nature at Ekurhuleni Duduza celebrating women's month having
-            various sports and entertainment activities
-          </h1>
-          <hr />
-          <p className="date"></p>
-        </div> */}
         {news.map((newsItem) => (
           <motion.div
             key={newsItem.id}
@@ -151,6 +137,44 @@ const News = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      <div>
+        <h1>UPCOMING EVENTS</h1>
+      </div>
+      <div className="upcomingEvents">
+        <div className="event-Item">
+          <div className="event-Poster">
+            <img src={Event2} />
+          </div>
+          <div>
+            <ul>
+              <li>Date: 28 April 2024</li>
+              <li>Time: 10</li>
+              <li>
+                Venue: Heidelberg - GP, Heidelberg, Heidelberg - GP, 1441, South
+                Africa
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="previous-Events">
+          <h1>PREVIOUS EVENTS</h1>
+          <ul className="events">
+            <li>
+              <a>testing</a>
+            </li>
+            <li>
+              <a>testing</a>
+            </li>
+            <li>
+              <a>testing</a>
+            </li>
+            <li>
+              <a>testing</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

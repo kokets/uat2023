@@ -2,11 +2,8 @@
 .newsSection {
   // display: flex;
   flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: space-between;
   padding: 0 10%;
-  // flex-direction: column;
-  // background-color: var(--light-purple);
+
 }
 .news-Title{
   display: flex;
@@ -25,9 +22,7 @@
   grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
   grid-template-rows: 250px 250px; /* Fixed row heights */
   grid-gap: 20px; /* Space between items */
-  // justify-content: center; /* Center the grid items horizontally */
-  // flex-wrap: wrap;
-  // background-color: blue;
+  
 }
 
 
@@ -140,9 +135,81 @@
   grid-column: 1; /* Span across the first column */
   grid-row: 2; /* Place in the second row */
 }
+.upcomingEvents{
+  display: flex;
+  justify-content: space-between;
+}
+.event-Item{
+  display: flex;
+  justify-content: space-between;
+}
+.event-Poster img{
+  height:450px;
+  width: 850px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance glass look */
+}
+.previous-Events{
+  // background-color: var( --blue-gray);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 20px;
+}
+.previous-events h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
 
+.events {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
+.events li {
+  position: relative;
+  padding: 10px 0;
+  font-size: 18px; /* Adjust this if you want to change the text size */
+  counter-increment: event; /* Increment the counter for each list item */
+}
 
+.events li::before {
+  content: counter(event) ' '; /* Add numbering before each list item */
+  font-weight: bold;
+  font-size: 28px; /* Larger font size for the numbers */
+  position: absolute;
+  left: -3rem; /* Adjust to position the numbers further from the text if needed */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.events li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the line */
+  background-color: #ccc; /* Line color */
+  transform: scaleX(0); /* Initial state hidden */
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.events li:hover::after {
+  transform: scaleX(1); /* Show the line on hover */
+  background-color: var( --blue-gray);
+}
+
+.events a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+}
 // .news-Content h1{
 //   font-size: 1rem; /* Font size for the title */
 //   white-space: normal; /* Allow text to wrap into multiple lines */
@@ -162,23 +229,18 @@
 
  
 // @media (max-width: 320px) {
-
+//   .news-Cards {
+//     grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+//     // grid-template-rows: auto; /* Auto height */
+//   }
 // }
 
 // @media (min-width: 320px) and (max-width: 480px ){
-//   .news-Card{
-//     max-width: 420px;
-  
-  
-//   }
+
 // }
 
 // @media (min-width: 480px) and (max-width: 600px) {
-//   .news-Card{
-//     width: 355px;
-  
-  
-//   }
+ 
 // }
 
 // @media (min-width:600px) and (max-width: 768px) {
@@ -198,3 +260,58 @@
 // @media (min-width: 1200px) and (max-width: 2000px) {
 
 // }
+/* Small mobile phones (portrait, 320px to 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .news-Cards {
+    grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+    // grid-template-rows: auto; /* Auto height */
+  }
+  .news-Card {
+    grid-column: 1; /* Each card spans the full width */
+    grid-row: auto; /* Automatic row flow */
+  }
+}
+
+/* Medium mobile phones (480px to 600px) */
+@media (min-width: 480px) and (max-width: 600px) {
+  .news-Cards {
+    grid-template-columns: 1fr 1fr; /* Two columns */
+  }
+  .news-Card:nth-child(1) {
+    grid-column: 1 / span 2; /* First card spans two columns */
+  }
+}
+
+/* Tablets (600px to 768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+  .news-Cards {
+    grid-template-columns: 1fr 1fr; /* Two columns */
+  }
+  .news-Card:nth-child(1) {
+    grid-column: 1 / span 2; /* First card spans two columns */
+  }
+}
+
+/* Tablets and small laptops (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .news-Cards {
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+  }
+  .news-Card:nth-child(1) {
+    grid-column: 1 / span 2; /* First card spans two columns */
+  }
+}
+
+/* Larger laptops and desktops (1024px to 1200px) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .news-Cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns */
+  }
+}
+
+/* Large desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .news-Cards {
+    // grid-template-columns: repeat(4, 1fr); /* Four columns */
+  }
+}
