@@ -1,9 +1,9 @@
 
 .newsSection {
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  // align-items: center;
+  // justify-content: space-between;
   padding: 0 10%;
   // flex-direction: column;
   // background-color: var(--light-purple);
@@ -14,85 +14,187 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  // width: 100%;
   // padding: 20px;
 
 }
 
 
 .news-Cards{
-  display: flex;
-  justify-content: center;
-  // align-items: center;
-  flex-wrap: wrap;
-  background-color: blue;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+  grid-template-rows: 250px 250px; /* Fixed row heights */
+  grid-gap: 20px; /* Space between items */
+  // justify-content: center; /* Center the grid items horizontally */
+  // flex-wrap: wrap;
+  // background-color: blue;
 }
-.news-Card{
-  width: 325px;
-  overflow: hidden;
-  border-radius: 8px;
-  margin: 20px;
-  background-color: var(--white);
 
+
+.news-Card {
+  position: relative; /* Set relative positioning for the card */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 10px;
+  background-color: var(--white);
+  overflow: hidden; /* Ensure the ::after element doesn't overflow the card */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-end; /* Align children to the bottom */
+  height: 100%; /* Make the card inherit the row's height */
+  width: 100%;
 }
 .news-Card img{
-width: 100%;
-height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire card */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Place the image behind the gradient and content */
+}
+.news-Card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, var(--dark-blue) 0%, var(--dark-blue) 30%, transparent 100%);
+  opacity: 0.8;
+  z-index: 1; /* Place it on top of the card content */
+}
+
+/* Card content */
+.news-Content {
+  position: relative;
+  z-index: 2; /* Ensure it sits above the gradient overlay and image */
+  // padding: 0;
+  // width: 100%; /* Ensure content spans the full width of the card */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Center horizontally */
+  // background-color: red;
+}
+.news-Card:nth-child(1) .topStory {
+  position: absolute; /* Place it relative to the card */
+  top: 10px; /* Position it near the top */
+  left: 10px; /* Position it near the left */
+  z-index: 3; /* Ensure it sits above the gradient overlay and image */
+  padding: 10px; /* Adjust padding */
+  // height: 100px;
+  background-color: rgba(204, 3, 3, 0.8); /* Optional: A light background for readability */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-sizing: border-box; /* Ensure padding is included in total dimensions */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Align content to the left */
+  text-align: left; /* Ensure text is left-aligned */
+  color: white;
 }
 
 
-.news-Content h1{
-  font-size: 0.8rem; /* Font size for the title */
-  white-space: normal; /* Allow text to wrap into multiple lines */
-  word-wrap: break-word; /* Break long words to prevent overflow */
-  margin-bottom: 8px;
-  font-family: "EB Garamond", serif;
-  color: var(--dark-blue);
+.content-Separator{
+  background-color: red;
+  width: 200px;
+  height:2px;
 }
-.news-Content{
-  padding: 16px;
+.news-Content .news-Items-Content{
+  color: antiquewhite;
 }
-.news-Content  .date {
-  font-size: 1.05rem;
-  color: var(--dark-blue);
-  margin-top: 10px;
+/* First card spans the first two columns and two rows */
+.news-Card:nth-child(1) {
+  grid-column: 1 / span 2; /* Span across the first two columns */
+  grid-row: 1 / span 2; /* Span across the first two rows */
 }
+
+/* Second card spans the third column, first row */
+.news-Card:nth-child(2) {
+  grid-column: 3; /* Span across the third column */
+  grid-row: 1; /* Place in the first row */
+}
+
+/* Third card spans the fourth column, first row */
+.news-Card:nth-child(3) {
+  grid-column: 4; /* Span across the fourth column */
+  grid-row: 1; /* Place in the first row */
+}
+
+/* Fourth card spans the third column, second row */
+.news-Card:nth-child(4) {
+  grid-column: 3; /* Span across the third column */
+  grid-row: 2; /* Place in the second row */
+}
+
+/* Fifth card spans the fourth column, second row */
+.news-Card:nth-child(5) {
+  grid-column: 4; /* Span across the fourth column */
+  grid-row: 2; /* Place in the second row */
+}
+
+/* Sixth card spans the first column, second row */
+.news-Card:nth-child(6) {
+  grid-column: 1; /* Span across the first column */
+  grid-row: 2; /* Place in the second row */
+}
+
+
+
+// .news-Content h1{
+//   font-size: 1rem; /* Font size for the title */
+//   white-space: normal; /* Allow text to wrap into multiple lines */
+//   word-wrap: break-word; /* Break long words to prevent overflow */
+//   // margin-bottom: 8px;
+//   font-family: "EB Garamond", serif;
+//   color: var(--white  );
+// }
+// .news-Content{
+//   padding: 16px;
+// }
+// .news-Content  .date {
+//   font-size: 1.05rem;
+//   color: var(--dark-blue);
+//   margin-top: 10px;
+// }
 
  
-@media (max-width: 320px) {
+// @media (max-width: 320px) {
 
-}
+// }
 
-@media (min-width: 320px) and (max-width: 480px ){
-  .news-Card{
-    max-width: 420px;
+// @media (min-width: 320px) and (max-width: 480px ){
+//   .news-Card{
+//     max-width: 420px;
   
   
-  }
-}
+//   }
+// }
 
-@media (min-width: 480px) and (max-width: 600px) {
-  .news-Card{
-    width: 355px;
+// @media (min-width: 480px) and (max-width: 600px) {
+//   .news-Card{
+//     width: 355px;
   
   
-  }
-}
+//   }
+// }
 
-@media (min-width:600px) and (max-width: 768px) {
+// @media (min-width:600px) and (max-width: 768px) {
 
-}
+// }
 
-@media (min-width: 768px) and (max-width: 800px) {
+// @media (min-width: 768px) and (max-width: 800px) {
 
-}
+// }
 
-@media (min-width: 800px) and (max-width: 1024px) {
+// @media (min-width: 800px) and (max-width: 1024px) {
 
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
+// }
+// @media (min-width: 1024px) and (max-width: 1200px) {
 
-}
-@media (min-width: 1200px) and (max-width: 2000px) {
+// }
+// @media (min-width: 1200px) and (max-width: 2000px) {
 
-}
+// }
