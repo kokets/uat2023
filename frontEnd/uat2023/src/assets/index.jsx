@@ -8,5 +8,6 @@ import Power from"./powerGeneration.webp";
 import Social from "./socialDevelopment.webp";
 import Law from "./law.webp";
 import Event1 from "./event25Aug.jpg"
-import Event2 from "./event1.webp"
-export  {Logo,Agriculture,Education,Economic,Health,Housing,Power,Social,Law,Event1,Event2};
+import Event2 from "./event1.webp";
+import Event3 from "./event3.jpg"
+export  {Logo,Agriculture,Education,Economic,Health,Housing,Power,Social,Law,Event1,Event2,Event3};

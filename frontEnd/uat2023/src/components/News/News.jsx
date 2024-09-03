@@ -33,6 +33,7 @@ import {
   Law,
   Event1,
   Event2,
+  Event3,
 } from "../../assets/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -145,7 +146,7 @@ const News = () => {
       <div className="upcomingEvents">
         <div className="event-Item">
           <div className="event-Poster">
-            <img src={Event2} />
+            <img src={Event3} />
           </div>
           <div>
             <ul>
