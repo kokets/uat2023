@@ -103,7 +103,13 @@
   background-color: var(--red); /* Background color on hover */
   /* box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);  */
 }
-
+/* .voteUat img{
+ justify-content: flex-end;
+ align-items: center;
+ width: 350px;
+ bottom: 0;
+ left: 0;
+} */
 /* Responsive Styles */
 @media (max-width: 320px) {
   .hero-Contain h2 {

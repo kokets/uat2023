@@ -112,7 +112,8 @@ const News = () => {
   };
   return (
     <div className="newsSection">
-      <div className="news-Title">
+      
+      <div className="news-Titl">
         <h1>LATEST NEWS</h1>
       </div>
 

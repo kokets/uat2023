@@ -1,13 +1,15 @@
 import React from "react";
 import { Header,HeroSection,Policy ,Welcome,Campaigns,Media,Newsletter,Footer,Copyright,News} from "../../components";
-import './Home.css'
+import './Home.css';
+import { Link } from 'react-router-dom';
+
 const menuItems = [
   { name: "Home", link: "#" },
   {
     name: "About",
     link: "#",
     subItems: [
-      { name: "Vision", link: "#" },
+      { name: "Vision", link: "/AboutUat" },
       { name: "Our leaders", link: "#" },
     ],
   },

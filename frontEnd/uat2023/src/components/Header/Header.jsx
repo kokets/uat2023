@@ -14,7 +14,7 @@ import {
   faInstagram, // Add Instagram icon
 } from "@fortawesome/free-brands-svg-icons";
 import "../Header/Header.scss";
-
+import { Link } from 'react-router-dom';
 
 const Header = ({ items }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const Header = ({ items }) => {
   const renderMenuItems = (items) => {
     return items.map((item, index) => (
       <li key={index}>
-        <a href={item.link}>{item.name}</a>
+        <Link to={item.link}>{item.name}</Link>
         {item.subItems && <ul>{renderMenuItems(item.subItems)}</ul>}
       </li>
     ));

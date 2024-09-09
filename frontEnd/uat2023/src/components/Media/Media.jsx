@@ -137,6 +137,12 @@ const Media = () => {
           </motion.div>
         </div>
       </div>
+      <div className="news-Letter">
+        <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+        <div className="voteUat">
+
+        </div>
+      </div>
     </div>
   );
 };

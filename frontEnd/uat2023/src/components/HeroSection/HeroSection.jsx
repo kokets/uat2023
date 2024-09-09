@@ -3,6 +3,8 @@ import { useSwipeable } from "react-swipeable";
 // import image1 from 'https://static.wixstatic.com/media/5de23b_0cb19e849f344d408286e65ee85787f7~mv2.jpg/v1/fill/w_1006,h_370,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5de23b_0cb19e849f344d408286e65ee85787f7~mv2.jpg';
 // import image2 from './430233779_388994224067581_6504176104002245906_n.jpg';
 
+import { uat2023 } from "../../assets/index";
+
 import "./HeroSection.css"; // Make sure to create the necessary CSS file
 
 // const images = [image1];
@@ -10,6 +12,7 @@ import "./HeroSection.css"; // Make sure to create the necessary CSS file
 const HeroSection = () => {
   return (
     <div className="hero-section">
+    
       <div className="hero-Contain">
         <h2>
           <span>LET'S GET</span> <span className="africa">SOUTH AFRICA</span>{" "}
@@ -20,6 +23,9 @@ const HeroSection = () => {
           society towards economic freedom. <br/> Let's Get It Right!
         </p> */}
         <button>Join Change</button>
+        <div className="voteUat">
+          <img src={uat2023} />
+        </div>
       </div>
     </div>
   );
