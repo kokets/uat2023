@@ -73,7 +73,7 @@ const Policy = () => {
   return (
     <div className="policySection">
       {/* <div className="cardContainer"> */}
-        <div>
+      <div className="section-Title">
           {" "}
           <h1>Key Policies</h1>
         </div>

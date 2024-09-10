@@ -1,3 +1,4 @@
 import Home from './Home/Home';
 import AboutUat from './AboutUat/AboutUat'
-export  {Home,AboutUat}
+import Leadership from './Leadership/Leadership'
+export  {Home,AboutUat,Leadership}

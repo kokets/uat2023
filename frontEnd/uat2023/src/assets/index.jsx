@@ -11,4 +11,10 @@ import Event1 from "./event25Aug.jpg"
 import Event2 from "./event1.webp";
 import Event3 from "./event3.jpg";
 import uat2023 from "./UATX.webp";
-export  {Logo,Agriculture,Education,Economic,Health,Housing,Power,Social,Law,Event1,Event2,Event3,uat2023};
+import africa from "./africa.png";
+import President from "./Pres.webp";
+import Treasure from "./TG.webp";
+import Banner from "./UATebanner.webp"
+import DP from "./DP_edited.webp";
+import Chairperson from "./Chairperson_edited.webp";
+export  {Logo,Agriculture,Education,Economic,Health,Housing,Power,Social,Law,Event1,Event2,Event3,uat2023,africa,President,Treasure,Banner,DP,Chairperson};

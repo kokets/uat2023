@@ -1,0 +1,61 @@
+.heroSection-Vision {
+  position: relative; /* Position relative to use the ::before pseudo-element */
+  background-color: var(--dark-navy);
+  background-image: url("../../assets/africa.png"); /* Path to your background image */
+  // background-repeat: repeat; /* Make the image repeat */
+  background-size: auto; /* Maintain the original size of the image */
+  background-position: top left; /* Align the image to the top-left corner */
+  height: 250px;
+  overflow: hidden; /* Ensure no overflow from the pseudo-element */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.heroSection-Vision::before {
+    content: ''; /* Necessary for pseudo-elements */
+    position: absolute; /* Position absolutely within the .middleBanner */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the entire width */
+    height: 100%; /* Cover the entire height */
+    background: linear-gradient(to top, var(--dark-blue) 0%, var(  --blue-burgundry) 50%, transparent 100%);
+
+    // background: rgba(3, 6, 151, 0.8); /* Shadow color with transparency (black with 50% opacity) */
+    pointer-events: none; /* Ensure it doesn’t block interactions */
+    z-index: 1; /* Place it above the background image but below content */
+}
+
+/* Optional: If you want to ensure the content sits on top */
+.heroSection-Vision > * {
+    position: relative; /* Ensure content appears above the shadow */
+    z-index: 2;
+}
+.heroSection-Vision {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    color: white;
+}
+.vision{
+    padding: 0 10%;
+}
+.vision p  {
+    /* color: var(--red); */
+    // text-align: center;
+    font-size: var(--font-size-body);
+  }
+  
+  
+  .vision ul  {
+    /* color: var(--red); */
+    // text-align: center;
+    font-size: var(--font-size-body);
+  }
+  
+  
+  .vision h2 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    // text-align: center;
+  
+    /* padding: 2px; */
+  }

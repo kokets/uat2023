@@ -4,12 +4,12 @@
 }
 .middleBanner {
     position: relative; /* Position relative to use the ::before pseudo-element */
-background-color: var(--dark-navy);
+background-color: var(--light-blue);
     background-image: url('../../assets/logo.png'); /* Path to your background image */
     background-repeat: repeat; /* Make the image repeat */
     background-size: auto; /* Maintain the original size of the image */
     background-position: top left; /* Align the image to the top-left corner */
-    height: 250px; /* Fixed height for the banner */
+    height: 250px; 
     overflow: hidden; /* Ensure no overflow from the pseudo-element */
     justify-content: center;
     align-items: center;
@@ -52,4 +52,9 @@ background-color: var(--dark-navy);
     color: var(--white); /* Text color on hover */
     background-color: var(--red); /* Background color on hover */
     /* box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);  */
+  }
+  .section-Title{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
   }

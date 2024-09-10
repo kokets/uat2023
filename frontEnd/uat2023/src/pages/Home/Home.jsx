@@ -10,20 +10,20 @@ const menuItems = [
     link: "#",
     subItems: [
       { name: "Vision", link: "/AboutUat" },
-      { name: "Our leaders", link: "#" },
+      { name: "Our leaders", link: "/Leadership" },
     ],
   },
-  {
-    name: "Newsroom",
-    link: "#",
-    subItems: [
-      { name: "News", link: "#" },
-      { name: "Newsletter", link: "#" },
-    ],
-  },
-  { name: "Policy ", link: "#" },
-  // { name: "Get ", link: "#" },
-  { name: "Contact", link: "#" },
+  // {
+  //   name: "Newsroom",
+  //   link: "#",
+  //   subItems: [
+  //     { name: "News", link: "#" },
+  //     { name: "Newsletter", link: "#" },
+  //   ],
+  // },
+  // { name: "Policy ", link: "#" },
+  // // { name: "Get ", link: "#" },
+  // { name: "Contact", link: "#" },
 
   // {
   //   name: 'Services', link: '#', subItems: [

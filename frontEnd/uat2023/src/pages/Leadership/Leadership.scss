@@ -1,0 +1,87 @@
+
+.heroSection-Leadership {
+    position: relative; /* Position relative to use the ::before pseudo-element */
+    background-color: var(--dark-navy);
+    background-image: url("../../assets/africa.png"); /* Path to your background image */
+    // background-repeat: repeat; /* Make the image repeat */
+    background-size: auto; /* Maintain the original size of the image */
+    background-position: top left; /* Align the image to the top-left corner */
+    height: 250px;
+    overflow: hidden; /* Ensure no overflow from the pseudo-element */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .heroSection-Leadership::before {
+      content: ''; /* Necessary for pseudo-elements */
+      position: absolute; /* Position absolutely within the .middleBanner */
+      top: 0; /* Align to the top */
+      left: 0; /* Align to the left */
+      width: 100%; /* Cover the entire width */
+      height: 100%; /* Cover the entire height */
+      background: linear-gradient(to top, var(--dark-blue) 0%, var(   --blue-burgundry) 50%, transparent 100%);
+  
+      // background: rgba(3, 6, 151, 0.8); /* Shadow color with transparency (black with 50% opacity) */
+      pointer-events: none; /* Ensure it doesn’t block interactions */
+      z-index: 1; /* Place it above the background image but below content */
+  }
+  
+  /* Optional: If you want to ensure the content sits on top */
+  .heroSection-Leadership > * {
+      position: relative; /* Ensure content appears above the shadow */
+      z-index: 2;
+  }
+  .heroSection-Leadership {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    color: white;
+  }
+  .Leadership{
+    padding: 0 10%;
+  }
+  .committee{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 4 equal columns */
+    grid-template-rows: 500px 500px; /* Fixed row heights */
+    grid-gap: 20px; /* Space between items */
+    padding: 20px;
+  }
+  .committeeImage {
+    position: relative;
+    // background-color: rgba(226, 226, 240, 0.8); 
+    flex-wrap: wrap;
+    // padding: 15px;
+    // background-color: #fff; /* Card background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance glass look */
+    height: 100%; /* Make the card inherit the row's height */
+    width: 100%;
+  }.leaderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    position: absolute;
+  
+    // z-index: 0; /* Place the image behind the gradient and content */
+  }
+  .leaderDetails {
+    position: absolute;
+    bottom: 0; /* Position the details at the bottom */
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: linear-gradient(to top, var(--dark-blue) 0%, var(  --blue-burgundry) 50%, transparent 100%);
+    z-index: 2; /* Ensure it sits above the image */
+    color: white; /* Ensure text is readable */
+  }
+  .leadership-header-title{
+    // font-size: 2rem;
+    // font-weight: var(--font-weight-bold);
+    text-align: center;
+  }

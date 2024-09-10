@@ -113,7 +113,7 @@ const News = () => {
   return (
     <div className="newsSection">
       
-      <div className="news-Titl">
+      <div className="section-Title">
         <h1>LATEST NEWS</h1>
       </div>
 
@@ -141,7 +141,7 @@ const News = () => {
         ))}
       </div>
 
-      <div>
+      <div className="section-Title">
         <h1>UPCOMING EVENTS</h1>
       </div>
       <div className="upcomingEvents">
@@ -149,7 +149,7 @@ const News = () => {
           <div className="event-Poster">
             <img src={Event3} />
           </div>
-          <div>
+          {/* <div>
             <ul>
               <li>Date: 28 April 2024</li>
               <li>Time: 10</li>
@@ -158,9 +158,9 @@ const News = () => {
                 Africa
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
-        <div className="previous-Events">
+        {/* <div className="previous-Events">
           <h1>PREVIOUS EVENTS</h1>
           <ul className="events">
             <li>
@@ -176,7 +176,7 @@ const News = () => {
               <a>testing</a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -137,15 +137,16 @@
 }
 .upcomingEvents{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .event-Item{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  // justify-content: space-between;
 }
 .event-Poster img{
-  height:950px;
-  width: 850px;
+  // height:950px;
+  // width: 850px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -262,51 +263,202 @@
 // }
 /* Small mobile phones (portrait, 320px to 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
+  .event-Poster img{
+    height:450px;
+    width: 350px;
+ 
+  }
   .news-Cards {
-    grid-template-columns: repeat(1, 1fr); /* Two equal columns */
-    // grid-template-rows: auto; /* Auto height */
+    grid-template-columns: 1fr; /* Two columns */
+    grid-template-rows: repeat(1, 350px); 
   }
-  .news-Card {
-    grid-column: 1; /* Each card spans the full width */
-    grid-row: auto; /* Automatic row flow */
+  // .news-Card:nth-child(1) {
+  //   grid-column: 4; /* Span across the first two columns */
+  //   // grid-row: 1 / span 2; /* Span across the first two rows */
+  // }
+  
+  /* Second card spans the third column, first row */
+  .news-Card:nth-child(2) {
+    display: none;
   }
+  
+  /* Third card spans the fourth column, first row */
+  .news-Card:nth-child(3) {
+    display: none;
+    // grid-row: 1; /* Place in the first row */
+  }
+  
+  /* Fourth card spans the third column, second row */
+  .news-Card:nth-child(4) {
+    display: none;
+    // grid-row: 2; /* Place in the second row */
+  }
+  
+  /* Fifth card spans the fourth column, second row */
+  .news-Card:nth-child(5) {
+    display: none;
+    // grid-row: 2; /* Place in the second row */
+  }
+  
+  /* Sixth card spans the first column, second row */
+  .news-Card:nth-child(6) {
+    display: none;
+  }  
 }
 
 /* Medium mobile phones (480px to 600px) */
 @media (min-width: 480px) and (max-width: 600px) {
+  .event-Poster img{
+    height:450px;
+    width: 350px;
+ 
+  }
   .news-Cards {
-    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-columns: 1fr; /* Two columns */
+    grid-template-rows: repeat(1, 350px); 
   }
-  .news-Card:nth-child(1) {
-    grid-column: 1 / span 2; /* First card spans two columns */
+  // .news-Card:nth-child(1) {
+  //   grid-column: 4; /* Span across the first two columns */
+  //   // grid-row: 1 / span 2; /* Span across the first two rows */
+  // }
+  
+  /* Second card spans the third column, first row */
+  .news-Card:nth-child(2) {
+    display: none;
   }
+  
+  /* Third card spans the fourth column, first row */
+  .news-Card:nth-child(3) {
+    display: none;
+    // grid-row: 1; /* Place in the first row */
+  }
+  
+  /* Fourth card spans the third column, second row */
+  .news-Card:nth-child(4) {
+    display: none;
+    // grid-row: 2; /* Place in the second row */
+  }
+  
+  /* Fifth card spans the fourth column, second row */
+  .news-Card:nth-child(5) {
+    display: none;
+    // grid-row: 2; /* Place in the second row */
+  }
+  
+  /* Sixth card spans the first column, second row */
+  .news-Card:nth-child(6) {
+    display: none;
+  }  
 }
 
 /* Tablets (600px to 768px) */
 @media (min-width: 600px) and (max-width: 768px) {
+  .event-Poster img{
+    height:450px;
+    width: 350px;
+ 
+  }
   .news-Cards {
-    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-columns: 1fr; /* Two columns */
+    grid-template-rows: repeat(1, 350px); 
   }
-  .news-Card:nth-child(1) {
-    grid-column: 1 / span 2; /* First card spans two columns */
+  // .news-Card:nth-child(1) {
+  //   display: none;
+
+  // }
+  /* Second card spans the third column, first row */
+  .news-Card:nth-child(2) {
+    display: none;
   }
+  
+  /* Third card spans the fourth column, first row */
+  .news-Card:nth-child(3) {
+    display: none;
+    // grid-row: 1; /* Place in the first row */
+  }
+  
+  /* Fourth card spans the third column, second row */
+  .news-Card:nth-child(4) {
+    display: none;
+    // grid-row: 2; /* Place in the second row */
+  }
+  
+  /* Fifth card spans the fourth column, second row */
+  .news-Card:nth-child(5) {
+    display: none;
+    // grid-row: 2; /* Place in the second row */
+  }
+  
+  /* Sixth card spans the first column, second row */
+  .news-Card:nth-child(6) {
+    display: none;
+  }  
 }
 
 /* Tablets and small laptops (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .news-Cards {
-    grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+    grid-template-columns: 1fr; /* Two columns */
+    grid-template-rows: repeat(1, 350px); 
   }
-  .news-Card:nth-child(1) {
-    grid-column: 1 / span 2; /* First card spans two columns */
+  /* Second card spans the third column, first row */
+  .news-Card:nth-child(2) {
+    display: none;
   }
+  
+  /* Third card spans the fourth column, first row */
+  .news-Card:nth-child(3) {
+    display: none;
+    // grid-row: 1; /* Place in the first row */
+  }
+  
+  /* Fourth card spans the third column, second row */
+  .news-Card:nth-child(4) {
+    display: none;
+    // grid-row: 2; /* Place in the second row */
+  }
+  
+  /* Fifth card spans the fourth column, second row */
+  .news-Card:nth-child(5) {
+    display: none;
+    // grid-row: 2; /* Place in the second row */
+  }
+  
+  /* Sixth card spans the first column, second row */
+  .news-Card:nth-child(6) {
+    display: none;
+  }  
 }
 
 /* Larger laptops and desktops (1024px to 1200px) */
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .news-Cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns */
-  }
+ /* Second card spans the third column, first row */
+ .news-Card:nth-child(2) {
+  display: none;
+}
+
+/* Third card spans the fourth column, first row */
+.news-Card:nth-child(3) {
+  display: none;
+  // grid-row: 1; /* Place in the first row */
+}
+
+/* Fourth card spans the third column, second row */
+.news-Card:nth-child(4) {
+  display: none;
+  // grid-row: 2; /* Place in the second row */
+}
+
+/* Fifth card spans the fourth column, second row */
+.news-Card:nth-child(5) {
+  display: none;
+  // grid-row: 2; /* Place in the second row */
+}
+
+/* Sixth card spans the first column, second row */
+.news-Card:nth-child(6) {
+  display: none;
+}  
 }
 
 /* Large desktops (1200px and above) */
