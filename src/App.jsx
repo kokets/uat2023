@@ -4,7 +4,7 @@ import { Home ,AboutUat,Leadership} from "./pages/Index";
 function App() {
   return (
     <main>
-      <Router>
+      <Router basename="/uat2023">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/AboutUat" element={<AboutUat />} />
