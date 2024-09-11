@@ -2,7 +2,7 @@
   "name": "uat2023",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://gitname.github.io/uat2023",
+  "homepage": "https://gitname.github.io/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
